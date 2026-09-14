@@ -3,3 +3,5 @@
 __pycache__/
 *.pyc
 references/*.pdf
+.serena/
+paper/latex/main.txt
