@@ -78,3 +78,30 @@ formalism. It is not enough to say what the direction means.
 
 If this note has drifted from the scripts and the data file, believe the scripts
 and the data file.
+
+## Addendum 2026-09-14: the size confound, tested
+
+Two checks run after the note above (`asymmetry_breadth_check.py`,
+`asymmetry_equal_n_check.py`, seed 0, same encoders).
+
+**Breadth.** Loss-set sizes differ (ignorance 70 items, paradox 48; contingency
+61, vagueness 53). Across the 10 pairs, asymmetry correlates with the size
+difference: Spearman ρ = +0.67 (p = 0.03, MiniLM), +0.52 (p = 0.13, mpnet). A
+larger set covers a smaller one better by chance alone, so size is a real
+confound, and the target pair has the largest size gap (+22) of any pair.
+
+**Size-matched.** Subsampling both sets to equal n (1000 draws):
+
+| pair | full n | matched mean [2.5%, 97.5%] |
+|---|---|---|
+| ignorance→paradox (MiniLM) | +0.151 | +0.113 [+0.039, +0.151] |
+| ignorance→paradox (mpnet) | +0.134 | +0.104 [+0.051, +0.132] |
+| contingency→vagueness (MiniLM) | +0.048 | +0.045 [+0.039, +0.051] |
+| contingency→vagueness (mpnet) | +0.085 | +0.081 [+0.072, +0.089] |
+
+Set size accounts for roughly a quarter of the target's magnitude and none of
+its sign. The control pair is unaffected by matching, so its failure is not a
+size artefact either. Standing: the direction is not explained by how many
+losses each phenomenon produced. Still unexplained, still not stimulus-swapped.
+(Sign convention here: asym(A→B) = c(A→B) − c(B→A); the battery script prints
+the coverage difference, which has the opposite sign for the control pair.)
