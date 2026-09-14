@@ -1,0 +1,327 @@
+Conjuntos Neutrosóficos Tipo-k: Estructuras Triádicas Recursivas y su 
+Realización Empírica en Modelos de Lenguaje de Gran Escala 
+
+Florentin Smarandache¹ · Maikel Leyva-Vázquez²³⁴,* 
+
+¹ Department of Mathematics, University of New Mexico, Gallup, NM 87301, USA. smarand@unm.edu 
+² Facultad de Ciencias Matemáticas y Físicas, Universidad de Guayaquil, Ecuador 
+³ Universidad Bolivariana del Ecuador, Durán, Ecuador 
+⁴ Universidad Bernardo O'Higgins, Santiago, Chile 
+* Correspondencia: maikel.leyvavazquez@ug.edu.ec 
+
+Resumen.  Introducimos  los  Conjuntos  Neutrosóficos  Tipo-k,  una  extensión  recursiva  de  la 
+lógica neutrosófica en la que cada componente epistémico (T, I, F) queda caracterizado por 
+una  tripleta  neutrosófica  completa,  generando  3ᵏ  escalares  por  elemento  a  profundidad  de 
+recursión k. Demostramos una jerarquía expresiva estricta Tipo-1 ⊊ Tipo-2 ⊊ ⋯ ⊊ Tipo-k y 
+definimos un operador de incrustación canónico y un operador de agregación recursivo que 
+se reduce al Promedio Ponderado Neutrosófico de Valor Único (SVNWA) estándar en k = 1. 
+Empíricamente, demostramos  que  los modelos  de  lenguaje  de  gran  escala  (LLMs)  calculan 
+implícitamente  valores  Tipo-2  cuando  los  protocolos  de  evaluación  permiten  componentes 
+fuera  de  [0,1]:  a  lo  largo  de  2.419  evaluaciones  de  seis  modelos  fundacionales  bajo  cinco 
+protocolos  epistémicos,  el  24,7%  de  todas  las  respuestas  requieren  representación  Tipo-2, 
+alcanzando el 97,3% bajo el protocolo de sobreconjunto S4-O.A. La restricción al Tipo-1 es 
+un  artefacto  del  protocolo,  no  un  límite  epistémico.  Los  Conjuntos  Neutrosóficos  Tipo-k 
+proporcionan  el  primer  marco  formal  que  hace  matemáticamente 
+legítimos  estos 
+comportamientos de los LLMs. 
+
+Palabras  clave:  conjuntos  neutrosóficos;  neutrosófico  tipo-2;  neutrosófico  recursivo; 
+modelos de lenguaje de gran escala; incertidumbre epistémica; modelos fundacionales. 
+
+1. Introducción 
+
+La lógica neutrosófica de Smarandache [1] representa proposiciones como tripletas (T, I, F) 
+donde T es el grado de verdad, I el grado de indeterminación y F el grado de falsedad, con 
+T, I, F ∈ [0,1] de forma independiente (sin restricción de suma). Esta representación Tipo-1 
+ha  encontrado  aplicación  en  la  toma  de  decisiones  multicriterio  [2],  el  procesamiento  de 
+imágenes  y,  más  recientemente,  en  la  evaluación  epistémica  de  modelos  de  lenguaje  de 
+gran escala (LLMs) [3, 4]. 
+
+Surge de forma natural una pregunta fundamental: si T es el grado en que una proposición 
+es verdadera, ¿en qué medida es T mismo verdadero, indeterminado o falso? En la lógica 
+difusa tipo 2 [5], los grados de pertenencia son a su vez conjuntos difusos, habilitando una 
+segunda  capa  de  incertidumbre.  El  análogo  neutrosófico  no  había  sido  definido 
+formalmente. 
+
+En  este  artículo  cubrimos  esa  brecha.  Introducimos  los  Conjuntos  Neutrosóficos  Tipo-k, 
+donde cada componente de una representación Tipo-(k-1) es reemplazado por una tripleta 
+
+neutrosófica  completa.  La  estructura  resultante  posee  3ᵏ  escalares  por  elemento  a 
+profundidad k y subsume el Tipo-1 como caso base. 
+
+Nuestra motivación es tanto teórica como empírica. En el plano teórico, la construcción es 
+la extensión más natural de la lógica neutrosófica a la incertidumbre anidada. En el plano 
+empírico,  mostramos  que  los  LLMs  de  última  generación  ya  calculan  valores  Tipo-2 
+cuando los protocolos de evaluación abren el rango más allá de [0,1]: valores negativos de 
+T  ("anti-verdad"),  I  >  1  ("hiper-indeterminación")  y  F  >  1  ("hiper-falsedad")  aparecen  en 
+todos los proveedores bajo el protocolo apropiado. 
+
+2. Antecedentes 
+
+2.1 Conjuntos Neutrosóficos Tipo-1 
+
+Definición 1 (Conjunto Neutrosófico Tipo-1 [1]). Sea U un universo de discurso. Un 
+conjunto neutrosófico A⁽¹⁾ sobre U asigna a cada elemento x ∈ U una tripleta μ⁽¹⁾(x) = 
+(T, I, F), con T, I, F ∈ [0,1] de forma independiente. No existe la restricción T + I + F = 
+1. 
+
+2.2 Extensiones existentes 
+Los conjuntos neutrosóficos de valor de intervalo [2] permiten que T, I, F sean intervalos 
+cerrados  en  [0,1].  La  lógica  neutrosófica  refinada  [6]  descompone  cada  componente  en 
+(T₁,…,Tₚ)  manteniendo  escalares  en  cada  nivel.  El 
+subcomponentes  T  → 
+sobreconjunto/subconjunto  neutrosófico  [7]  permite  componentes  fuera  de  [0,1].  Los 
+conjuntos  plitogénicos  [8]  asignan  grados  de  contradicción  entre  valores  de  atributo. 
+Ninguno asigna una tripleta neutrosófica completa a cada componente, que es precisamente 
+la característica definitoria de los Conjuntos Neutrosóficos Tipo-k. 
+
+3. Conjuntos Neutrosóficos Tipo-k 
+
+3.1 Definiciones 
+
+Definición  2  (Conjunto  Neutrosófico  Tipo-2).  Un  Conjunto  Neutrosófico  Tipo-2  A⁽²⁾ 
+sobre U asigna a cada x ∈ U nueve escalares organizados como tres tripletas anidadas: 
+T  →  (T_T,  I_T,  F_T),  I  →  (T_I,  I_I,  F_I),  F  →  (T_F,  I_F,  F_F),  donde  los  nueve 
+escalares pertenecen a [0,1] de forma independiente. Esta es la construcción propuesta 
+por  Smarandache  (comunicación  personal,  2026-05-04):  "podemos  establecer  una 
+tripleta T, I, F para cada tipo de incertidumbre, contradicción, indeterminación, etc." 
+
+Definición 3 (Conjunto Neutrosófico Tipo-3). Cada uno de los nueve escalares de una 
+representación Tipo-2 es a su vez reemplazado por una tripleta neutrosófica, generando 
+27 escalares por elemento. Para el componente T: T_T → (T_{TT}, I_{TT}, F_{TT}), y 
+análogamente para los demás subcomponentes. 
+
+Definición  4  (Conjunto  Neutrosófico  Tipo-k).  Un  Conjunto  Neutrosófico  Tipo-k  se 
+define  recursivamente:  (i)  caso  base  k  =  1  es  el  conjunto  neutrosófico  estándar;  (ii) 
+para  k  ≥  2,  cada  componente  escalar  de  un  elemento  Tipo-(k−1)  es  reemplazado  por 
+
+una  tripleta  neutrosófica  completa.  Cada  elemento  x ∈  U  queda  caracterizado  por  3ᵏ 
+escalares. El conjunto de conjuntos neutrosóficos Tipo-k sobre U se denota NS⁽ᵏ⁾(U). 
+
+Observación. De forma más general, T, I, F pueden ser conjuntos neutrosóficos en lugar de 
+escalares, generando una construcción de dimensión infinita que subsume todos los Tipo-k 
+finitos como proyecciones. El desarrollo formal de este caso queda para trabajo futuro. 
+
+3.2 Incrustación canónica y jerarquía 
+
+Definición  5  (Incrustación  φ).  La  incrustación  canónica  φ:  NS⁽ᵏ⁻¹⁾(U)  →  NS⁽ᵏ⁾(U) 
+aplica a cada escalar s la tripleta (s, 0, 1−s). 
+
+Teorema 1 (Jerarquía estricta). NS⁽¹⁾(U) ⊊ NS⁽²⁾(U) ⊊ ⋯ ⊊ NS⁽ᵏ⁾(U). 
+
+Demostración / Prova. La inclusión ⊆ se sigue de la incrustación φ. Strictura ⊊ (testigo 
+para k = 2): considérese una respuesta con T = −0,2 (anti-verdad). En Tipo-1, se requiere 
+T ∈ [0,1], por lo que T = −0,2 es inadmisible. En Tipo-2 se representa como (T_T = 0,0; 
+I_T = 0,2; F_T = 0,8), una tripleta bien formada. Empíricamente se observaron 65 tales 
+respuestas  (2,7%  de  las  evaluaciones).  El  testigo  (T  =  1,7;  I  =  1,8;  F  =  1,6)  es 
+inadmisible en cualquier marco Tipo-1 pero completamente representable en Tipo-2. ■ 
+
+4. Operador de Agregación Recursivo 
+
+El  SVNWA  estándar  [2]  en  Tipo-1  agrega  n  valores  SVNS  con  pesos  w  =  (w₁,…,wₙ): 
+SVNWA(a₁,…,aₙ) = (1−∏(1−Tᵢ)ʷⁱ, ∏Iᵢʷⁱ, ∏Fᵢʷⁱ). 
+
+Definición 6 (SVNWA Tipo-k). El SVNWA Tipo-k aplica el operador SVNWA de forma 
+recursiva  a  cada  sub-tripleta  de  forma  independiente  en  cada  nivel.  Para  Tipo-2: 
+SVNWA⁽²⁾  agrega  cada  una  de  las  tres  sub-tripletas  (T_T,I_T,F_T),  (T_I,I_I,F_I), 
+(T_F,I_F,F_F) por separado usando el SVNWA estándar. 
+
+Proposición 1 (Reducción). SVNWA⁽ᵏ⁾ se reduce al SVNWA estándar cuando todos los 
+elementos son imágenes bajo φ (es decir, todas las sub-tripletas tienen I = 0 y F = 1−T). 
+
+5. Evidencia Empírica: Los LLMs como Computadores Implícitos Tipo-2 
+
+5.1 Diseño experimental 
+Reanalizamos 2.419 evaluaciones de un estudio empírico multiproveedor [3]. Seis modelos 
+fundacionales  (Alibaba  Qwen-3-235B, Anthropic Claude Sonnet  4, DeepSeek Chat,  Meta 
+Llama-4-Maverick,  Mistral  Medium-3.1,  OpenAI  GPT-4o)  fueron  evaluados  sobre  cinco 
+fenómenos epistémicos bajo cinco protocolos: S1 (escalar clásico), S4 (marco Mason [4] de 
+tres componentes), S4-N (neutrosófico por atributo), S4-O.A (sobreconjunto T,I,F ∈ [0,2]), 
+S4-O.C (subconjunto T,I,F ∈ [−1,2]). Una respuesta requiere Tipo-2 si algún componente 
+cae fuera de [0,1]. Datos y código: github.com/mleyvaz/typek-neutrosophic-sets. 
+
+5.2 Resultados 
+
+Protocolo 
+
+n 
+
+Tipo-2 requerido 
+
+% 
+
+Tabla 1. Requerimiento Tipo-2 por protocolo. 
+
+S4-O.A 
+S4-O.C 
+S4-N 
+S4 
+S1 
+S1-taut 
+Total 
+
+300 
+889 
+300 
+300 
+300 
+90 
+2.419 
+
+292 
+305 
+0 
+0 
+0 
+0 
+597 
+
+Tabla 2. Requerimiento Tipo-2 por proveedor (protocolos S4-O). 
+
+Proveedor 
+Mistral Medium-3.1 
+OpenAI GPT-4o 
+Anthropic Claude 
+Sonnet 4 
+Meta Llama-4-Maverick 
+DeepSeek Chat 
+Alibaba Qwen-3-235B 
+
+n 
+435 
+377 
+408 
+
+355 
+431 
+413 
+
+Tipo-2 requerido 
+130 
+100 
+108 
+
+81 
+97 
+81 
+
+97,3 
+34,3 
+0,0 
+0,0 
+0,0 
+0,0 
+24,7 
+
+% 
+29,9 
+26,5 
+26,5 
+
+22,8 
+22,5 
+19,6 
+
+Subtipo Tipo-2 
+I > 1  (hiper-indeterminación) 
+T > 1  (hiper-verdad) 
+F > 1  (hiper-falsedad) 
+T < 0  (anti-verdad) 
+
+Tabla 3. Subtipos Tipo-2 en todas las evaluaciones. 
+n 
+507 
+129 
+91 
+65 
+
+% del total 
+21,0 
+5,3 
+3,8 
+2,7 
+
+5.3 Interpretación 
+Tres  observaciones  son  centrales.  Primero,  la  dicotomía  cero  vs.  alto:  los  protocolos 
+estándar producen 0% de respuestas Tipo-2 porque el formato impone [0,1]; los protocolos 
+extendidos generan el 97,3% Tipo-2. La restricción es un artefacto del protocolo. Segundo, 
+consistencia  entre  proveedores:  el  rango  19,6%–29,9%  en 
+los  seis  proveedores 
+independientes descarta una idiosincrasia de un modelo específico. Tercero, el testigo (T = 
+1,7; I = 1,8; F = 1,6) se mapea a Tipo-2 como estado epistémico coherente que Tipo-1 no 
+puede representar. 
+
+6. Conexiones con Marcos Neutrosóficos Existentes 
+
+La  lógica  neutrosófica  refinada  [6]  aumenta  la  cardinalidad  en  un  único  nivel.  Tipo-k 
+aumenta  la  profundidad  de  recursión.  Son  ortogonales.  Los  tensores  plitogénicos  [3] 
+asignan  tripletas  Tipo-1 por  atributo,  una  estructura  Tipo-2  a  lo  largo  de  la  dimensión  de 
+atributos. Los Tensores SVN [9] son estructuras Tipo-1 a lo largo de los modos tensoriales; 
+los  Tensores  Tipo-k  (combinando  ambos)  son  trabajo  futuro  natural.  El  Problema  de 
+Absorción  [3]  —donde  I  →  1  bajo  protocolos  estándar—  queda  ahora  formalmente 
+caracterizado como una proyección forzada Tipo-2 → Tipo-1. 
+
+7. Conclusión 
+
+ 
+ 
+ 
+Hemos  introducido  los  Conjuntos  Neutrosóficos  Tipo-k,  probado  una  jerarquía  expresiva 
+estricta  y  demostrado  que  los  LLMs  ya  calculan  valores  Tipo-2  cuando  el  protocolo  lo 
+permite.  Tres  direcciones  para  trabajo  futuro:  (1)  Tipo-3  para  meta-incertidumbre;  (2) 
+generalización  de  subconjuntos  más  allá  de  la  profundidad  finita  k;  (3)  distancia  y 
+agrupamiento Tipo-k de LLMs por profundidad de expresión epistémica. 
+
+Conflicto de intereses 
+
+Los autores declaran no tener conflicto de intereses. 
+
+Agradecimientos 
+
+Los  autores  agradecen  a  la  Universidad  de  Guayaquil  y  a  la  Universidad  Bolivariana  del 
+Ecuador por su apoyo institucional. 
+
+Referencias 
+
+[1]  Smarandache,  F.  (1998).  Neutrosophy:  Neutrosophic  Probability,  Set,  and  Logic.  American 
+
+Research Press. 
+
+[2]  Wang,  H.,  Smarandache,  F.,  Zhang,  Y.Q.,  &  Sunderraman,  R.  (2010).  Single  valued 
+
+neutrosophic sets. Multispace & Multistructure, 4, 410–413. 
+
+[3] Leyva-Vázquez, M., & Smarandache, F. (2026). Plithogenic tensor neutrosophic logic: A formal 
+
+foundation for declared-loss evaluation in LLMs. Manuscrito enviado. 
+
+[4] Mason, T. (2026). From scalars to tensors: Declared losses  recover epistemic distinctions that 
+
+neutrosophic scalars cannot express. arXiv:2604.09602. 
+
+[5] Mendel, J.M., & John, R.I. (2002). Type-2 fuzzy sets made simple. IEEE Transactions on Fuzzy 
+
+Systems, 10(2), 117–127. 
+
+[6]  Smarandache,  F.  (2013).  n-Valued  refined  neutrosophic  logic  and  its  applications  to  physics. 
+
+Progress in Physics, 4, 143–146. 
+
+[7] Smarandache, F. (2016). Neutrosophic overset, neutrosophic underset, and neutrosophic offset. 
+
+Pons Editions. 
+
+[8]  Smarandache,  F.  (2018).  Plithogeny,  plithogenic  set,  logic,  probability,  and  statistics.  Pons 
+
+Publishing House. 
+
+[9] Leyva-Vázquez, M., & Smarandache, F. (2026). Single-valued neutrosophic tensors. arXiv (en 
+
+preparación). 
+
+[10]  Ye,  J.  (2014).  A  multicriteria  decision-making  method  using  aggregation  operators  for 
+
+simplified neutrosophic sets. Journal of Intelligent & Fuzzy Systems, 26(5), 2459–2466. 
+[11] Atanassov, K.T. (1986). Intuitionistic fuzzy sets. Fuzzy Sets and Systems, 20(1), 87–96. 
+
+

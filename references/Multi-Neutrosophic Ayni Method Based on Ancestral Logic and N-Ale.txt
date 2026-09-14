@@ -1,0 +1,1779 @@
+Neutrosophic Sets and Systems 
+Neutrosophic Sets and Systems 
+
+Volume 84 Neutrosophic Sets and Systems, 
+Vol. 83, 2025 
+
+Article 1 
+
+6-8-2025 
+
+Multi-Neutrosophic Ayni Method Based on Ancestral Logic and N-
+Multi-Neutrosophic Ayni Method Based on Ancestral Logic and N-
+
+Alectic Reasoning for Ethical AI and Sustainability 
+Alectic Reasoning for Ethical AI and Sustainability 
+
+Maikel Y. Leyva Vázquez 
+Universidad Bolivariana del Ecuador, Duran, Guayas Ecuador, myleyvav@ube.edu.ec 
+
+Noel Batista Hernandez 
+Universidad Bolivariana del Ecuador, Duran, Guayas Ecuador, nbatistah@ube.edu.ec 
+
+Edwin Alberto Callejas 
+Faculty of Computer Science and Applied Sciences, University of Technology of El Salvador, San Salvador 
+1020, El Salvador, edwin.callejas@utec.edu.sv 
+
+Florentin Smarandache 
+Emeritus Professor of Mathematics at the University of New Mexico, Gallup, New Mexico, USA, 
+smarand@unm.edu 
+
+Follow this and additional works at: https://digitalrepository.unm.edu/nss_journal 
+
+Recommended Citation 
+Recommended Citation 
+Leyva Vázquez, Maikel Y.; Noel Batista Hernandez; Edwin Alberto Callejas; and Florentin Smarandache. 
+"Multi-Neutrosophic Ayni Method Based on Ancestral Logic and N-Alectic Reasoning for Ethical AI and 
+Sustainability." Neutrosophic Sets and Systems 84, 1 (2025). https://digitalrepository.unm.edu/
+nss_journal/vol84/iss1/1 
+
+This Article is brought to you for free and open access by UNM Digital Repository. It has been accepted for 
+inclusion in Neutrosophic Sets and Systems by an authorized editor of UNM Digital Repository. For more 
+information, please contact disc@unm.edu. 
+
+              Neutrosophic Sets and Systems, {Special Issue: Artificial Intelligence, Neutrosophy, and Latin 
+American Worldviews: Toward a Sustainable Future (Workshop – March 18–21, 2025, Univer- 
+sidad Tecnológica de El Salvador, San Salvador, El Salvador)}, Vol. 84, 2025 
+
+                        University of New Mexico 
+
+Multi-Neutrosophic Ayni Method Based on Ancestral 
+Logic and N-Alectic Reasoning for Ethical AI and 
+Sustainability 
+Maikel Y. Leyva Vázquez 1,2*, Noel Batista Hernandez3, Edwin Alberto Callejas 4 and Florentin   
+Smarandache 5 
+
+1 Universidad Bolivariana del Ecuador, Duran, Guayas Ecuador; myleyvav@ube.edu.ec   
+2 Universidad de Guayaquil, Guayas Ecuador; maikel.leyvav@ug.edu.ec 
+3 Universidad Bolivariana del Ecuador, Duran, Guayas Ecuador; nbatistah@ube.edu.ec   
+4 Faculty of Computer Science and Applied Sciences, University of Technology of El Salvador, San Salvador 1020, El Salvador; 
+
+5 Emeritus Professor of Mathematics at the University of New Mexico, Gallup, New Mexico, USA; smarand@unm.edu   
+
+edwin.callejas@utec.edu.sv   
+
+Abstract: This  article  presents  the  Multi-Neutrosophic  Ayni  Method,  a  novel  framework  that  integrates 
+Latin  American  Indigenous  philosophies  with  neutrosophic  logic  to  guide  ethical  and  sustainable  AI 
+development. Grounded in ancestral principles such as Ayni, Buen Vivir, In Lak’ech, ch’ixi, and nepantla, 
+this  approach  models  plural,  ambiguous,  and  context-dependent  ethical  judgments  through  Multi-
+Neutrosophic  Sets  (MNS).  A  key  contribution  is  the  introduction  of  the  Euclidean  Multi-Neutrosophic 
+Consensus  Measure,  which  quantifies  the degree  of  alignment  among diverse  stakeholders'  evaluations 
+without  erasing  epistemic  differences. This measure  enables  the  detection  of  convergence  thresholds  in 
+intercultural  deliberation,  offering  a  rigorous  yet  flexible  tool  for  decision-making.  The  method  is 
+illustrated through a case study evaluating the deployment of an AI diagnostic system in an Indigenous 
+community. Results show how the iterative application of the Ayni principle—understood as reciprocal 
+ethical  negotiation—improves  both  alignment  and  legitimacy.  This  work  demonstrates  that  Indigenous 
+logics,  when  formalized  through  neutrosophy,  are  not  only  philosophically  rich  but  also  operationally 
+valuable for developing just, inclusive, and context-sensitive technologies. 
+
+Keywords:  Multi-Neutrosophic  Sets;  Ayni  principle;  n-alectic  reasoning;  intercultural  AI  ethics; 
+Indigenous logic; sustainability; consensus measure 
+
+1. Introduction 
+
+The  accelerated  development  of  artificial  intelligence  (AI)  has  generated  complex  ethical  and 
+sustainability  challenges  that  exceed  the  capacity  of  traditional  binary  frameworks  to  address.  While 
+dominant ethical models in AI tend to rely on utilitarian or deontological approaches rooted in Western 
+epistemologies  [1],  these  frameworks  often  fall  short  in  culturally  diverse  contexts,  especially  when 
+confronted  with  worldviews 
+that  prioritize  community,  spiritual  reciprocity,  and  ecological 
+interdependence [2]. 
+
+Recent scholarship has begun to explore the ethical implications of AI in non-Western contexts [3,4], yet 
+there  remains  a  gap  in  formal  tools  capable  of  modeling  Indigenous  epistemologies  in  a  rigorous  and 
+transdisciplinary  manner.  In  particular,  Latin  American  Indigenous  philosophies—such  as  Buen  Vivir 
+(Sumak Kawsay) [5], yanantin [6], ch’ixi [7], In Lak’ech [8], and nepantla [9]—offer conceptual structures that 
+transcend dualisms by embracing complementarity, ambiguity, and plural truths. These principles align 
+
+Maikel Y. Leyva Vázquez , Noel Batista Hernandez, Edwin Alberto Callejasand Florentin Smarandache, Multi-Neutrosophic Ayni 
+Method Based on Ancestral Logic and N-Alectic Reasoning for Ethical AI and Sustainability 
+
+   
+ 
+ 
+ 
+ 
+ 
+Neutrosophic Sets and Systems, {Special Issue: Artificial Intelligence, Neutrosophy, and Latin American 
+Worldviews: Toward a Sustainable Future (Workshop – March 18–21, 2025, Universidad Tecnológica 
+de El Salvador, San Salvador, El Salvador)}, Vol. 84, 2025         
+
+2 
+
+closely with n-alectic reasoning [10], a logic derived from neutrosophy that allows for the simultaneous 
+presence of truth, falsity, and indeterminacy. 
+
+To address this gap, this article introduces a novel methodological framework—the Multi-Neutrosophic 
+Ayni  Method  —designed  to  model  and  evaluate  ethical  dilemmas  in  culturally  heterogeneous 
+environments.  Drawing  from  neutrosophic  logic  and  Indigenous  philosophies,  this  method  integrates 
+mathematical  precision  with  epistemic  pluralism,  offering  a  formal  structure  to  navigate  complex 
+intercultural decision-making. 
+
+The term Ayni [11, 12], an Andean principle of reciprocal relationality, underpins the ethical foundation 
+of this method. In Andean thought, Ayni implies that all actions must be balanced by mutual care, dialogue, 
+and contextual respect. Applied to AI ethics, Ayni encourages a co-designed, participatory approach that 
+recognizes  the  dignity  and  agency  of  all  actors—including  Indigenous  knowledge  holders—as  co-
+evaluators  in  technological  decisions.  Thus,  the  Multi-Neutrosophic  Ayni  Method  honors  difference 
+without erasure, enabling consensus without requiring homogenization. 
+
+This study is structured as follows: 
+
+• 
+• 
+
+• 
+
+• 
+
+Section 2 reviews key Indigenous cosmovisional principles and explains their n-alectic nature. 
+Section  3  presents  the  proposed  methodology,  including  the  Euclidean  Neutrosophic 
+Consensus Measure. 
+Section  4  applies  the  method  to  an  illustrative  case  involving  the  integration  of  AI  into  an 
+Indigenous healthcare system. 
+Section  5  concludes  with  reflections  on  the  potential  of  Indigenous  logic  and  neutrosophic 
+models to guide sustainable and ethical AI development. 
+
+Through  this  synthesis  of  ancestral  wisdom  and  mathematical  logic,  the  article  contributes  a 
+transdisciplinary approach to ethical evaluation—one that is inclusive, pluralistic, and grounded in both 
+formal rigor and intercultural sensitivity 
+
+2. Preliminaries   
+
+2.1 Cosmovisional Principles with an N-Alectic Structure 
+
+2.1.1 Buen Vivir (Sumak Kawsay) 
+
+Buen Vivir (in Quechua sumak kawsay, in Aymara suma qamaña)[13], as adopted in the constitutions of 
+Andean  countries,  is  a  principle  that  proposes  living  in  fullness  and  harmony  with  both  the  human 
+community and nature. More than a simple ideal of life, it constitutes a holistic paradigm that rejects the 
+dichotomies characteristic of Western models of development. In its original Andean meaning, sumak refers 
+to the ideal and harmonious realization of the world, while kawsay means life understood as a dignified, 
+balanced, and fulfilling existence. Other Indigenous peoples share similar notions of “good living” (e.g., 
+teko kavi among the Guarani), based on collective harmony [14]. 
+
+This  worldview  envisions  the  world  as  “a  house  where  everyone  lives,”  emphasizing  community, 
+family,  and  the  vitality  of  the  territory.  In  n-alectic  terms, Buen  Vivir  integrates what  we could  call  the 
+“truths”  of different  domains:  social well-being,  environmental  sustainability,  and  economic  prosperity, 
+avoiding the prioritization of one at the expense of the others. It recognizes that focusing solely on material 
+profit while ignoring social health or the environment is “false” progress; at the same time, neglecting basic 
+economic needs does not lead to a fulfilling life either (a “false” idealism) [15]. 
+
+The virtue lies in complementarity: articulating an economy in service of the community and Pachamama 
+(Mother  Earth)  [16],  achieving  social  justice  and  ecological  balance  simultaneously.  For  this  reason, 
+Indigenous ethics presents itself as a unified system of values intertwining social cohesion, environmental 
+sustainability, cultural respect, and spirituality. It is not about static balances, but a dynamic and contextual 
+adjustment: each decision must weigh how it affects the entire fabric of life [17]. 
+
+Maikel Y. Leyva Vázquez , Noel Batista Hernandez, Edwin Alberto Callejasand Florentin Smarandache, Multi-Neutrosophic Ayni 
+Method Based on Ancestral Logic and N-Alectic Reasoning for Ethical AI and Sustainability 
+
+ 
+ 
+ 
+ 
+ 
+Neutrosophic Sets and Systems, {Special Issue: Artificial Intelligence, Neutrosophy, and Latin American 
+Worldviews: Toward a Sustainable Future (Workshop – March 18–21, 2025, Universidad Tecnológica 
+de El Salvador, San Salvador, El Salvador)}, Vol. 84, 2025         
+
+3 
+
+Andean cultures have traditionally prioritized decisions that integrate multiple dimensions—human, 
+spiritual, and environmental—in order to maintain ecological and social harmony. This principle demands 
+that AI, in order to be ethical, should not pursue an isolated goal (e.g., maximizing economic efficiency) at 
+the expense of community well-being or nature. Rather, it should optimize solutions that yield shared gains 
+across the social, environmental, and economic domains[18]. 
+
+In practice, guiding AI by the principle of Buen Vivir means developing technologies centered on the 
+common  good—technologies  that  strengthen  community  health  and  education,  respect  the  limits  of 
+ecosystems,  and  equitably distribute  their  benefits.  Any  AI  system,  no  matter  how  powerful,  should  be 
+evaluated by its contribution to this collective and sustainable fullness of life. 
+
+2.1.2 Yanantin – Andean Complementary Duality 
+
+In the Andean worldview, yanantin [19] represents the union of opposing yet interdependent energies—
+a  Quechua  principle  often  translated  as  the  “complementarity  of  differences”.    Long  before  modern 
+physics explored the concept of dualities or multi-valued logics emerged in philosophy, Andean peoples 
+already conceived of reality as composed of mutually necessary pairs: feminine and masculine, light and 
+darkness, sun and moon, mountain and valley. These opposites are neither irreconcilable nor hierarchically 
+ordered; rather, they coexist harmoniously to form a unified whole.   
+
+Thus,  the  dynamic  relationship  of  balanced  polarities  is  considered  the  fundamental  organizing 
+principle of creation; existence itself depends on the harmonious exchange between opposing forces, which 
+must  interact  without  destroying  one  another [20]. Logically  speaking,  each  element  of  the  pair  may  be 
+understood  as  a  partial  “truth”:  each  contains  valuable  and  genuine  aspects  in  its  own  right  but  also 
+remains “false” or incomplete if it attempts to encompass the whole without its counterpart. Greater truth 
+emerges from the interaction of both sides. Andean reasoning, therefore, resists the notion that one must 
+choose a single side of duality; instead, it seeks a third space of balance in which both halves coexist. 
+
+Neutrosophic logic [21] offers a formal model for this perspective, allowing for intermediate values that 
+represent  collaboration  rather  than  exclusion  between  opposites.  A  “quadruple  neutrosophic  logic”  has 
+been  proposed  to  mathematically  represent  Andean  duality:  truth  (T)  and  falsity  (F)  are  refined  by 
+introducing two types of indeterminacy—one inclined toward truth (𝑰𝑻, symbolizing the complementary 
+relationship  where  opposites  support  one  another),  and  one  inclined  toward  falsity  (𝑰𝑭 ,  symbolizing 
+contradictory  tension  when  opposites  clash)  [10].  This  formalization  reflects  the  real-life  complexity  in 
+which opposites may be simultaneously complementary and contradictory. For example, it is traditionally 
+said  that  woman  complements  man,  but  she  is  also  sometimes  “his  contradiction”  in  everyday 
+coexistence—out of the friction between the two arises mutual adjustment and growth. 
+
+When applied to artificial intelligence, the principle of yanantin suggests that the design and deployment 
+of  technology  should  value  multiple,  opposing  yet  complementary  perspectives.  A  truly  ethical  and 
+effective AI could emerge from the integration of Western scientific knowledge with traditional Indigenous 
+wisdom, rather than privileging one and discarding the other [22]. This also implies balancing automation 
+with human intervention—not delegating all critical decisions to algorithms devoid of human judgment 
+(blind  technocracy),  nor  rejecting  technological  innovation  altogether  (sterile  Luddism),  but  instead 
+achieving complementary interaction. 
+
+This  principle  reminds  us  that  in  the  face  of  ethical  dilemmas,  the  optimal  solution  often  lies  not  in 
+choosing one extreme but in finding synergy between both [23]. Applied to AI decision-making, yanantin 
+would  encourage  the  development  of  hybrid  systems  in  which  AI  enhances  human  capabilities  while 
+humans supervise and correct AI—creating balanced human-machine teams. Similarly, in AI regulation, 
+we  must  reconcile  the  freedom  of  innovation  (valued  as  truth  by  the  economic  sector)  with  social  and 
+cultural protection (valued as truth by communities and public ethics), aiming for a fertile middle ground. 
+
+Maikel Y. Leyva Vázquez , Noel Batista Hernandez, Edwin Alberto Callejasand Florentin Smarandache, Multi-Neutrosophic Ayni 
+Method Based on Ancestral Logic and N-Alectic Reasoning for Ethical AI and Sustainability 
+
+ 
+ 
+ 
+ 
+ 
+Neutrosophic Sets and Systems, {Special Issue: Artificial Intelligence, Neutrosophy, and Latin American 
+Worldviews: Toward a Sustainable Future (Workshop – March 18–21, 2025, Universidad Tecnológica 
+de El Salvador, San Salvador, El Salvador)}, Vol. 84, 2025         
+
+4 
+
+In summary, yanantin invites us to conceive of AI not as a soloist, but as a duet—harmonizing different 
+forces to achieve a result that is more complete and balanced than the sum of its parts. 
+
+2.1.3 Ch’ixi Thought – Complementary Contradiction and the Intermediate State 
+
+From the Andean–Aymara worldview emerges the concept of ch’ixi, popularized by Bolivian sociologist 
+Silvia Rivera Cusicanqui [24]. Ch’ixi originally refers to a speckled or mottled color—a mixture of black and 
+white in which the two do not blend but coexist without canceling one another (Figure 1). In cultural terms, 
+Rivera employs the concept to describe a mestizo epistemology where Indigenous and Western elements 
+are interwoven without fully synthesizing into a homogeneous whole. It is thus a way of being multiple at 
+once:  embracing  internal  contradiction  as  an  integral  part  of  identity.  A  ch’ixi  world  is  one  in  which 
+different  truths  and  logics  coexist  in  unresolved  tension—a  “weaving  made  from  both  conflict  and 
+complementarity” [25]. 
+
+Figure 1. Ch'ixi Harmony: Threads of Coexistence. Image created using generative artificial intelligence (ChatGPT with 
+DALL·E model, OpenAI, 2024). Graphic representation inspired by the Andean philosophy of ch'ixi, illustrating the 
+coexistence of diverse identities without homogeneous mixing. 
+
+This intermediate space (taypi in Aymara) [26] is “full of tensions” but also of creative vitality, as new 
+possibilities  emerge  from  continuous  friction  without  any  one  perspective  establishing  hegemony.  In 
+Andean  textile  metaphors,  the  taypi  ch’ixi  represents  the  center  of  the  fabric,  balancing  symmetries  and 
+rhythms,  allowing  threads  of  opposing  colors  to  form  a  complex  pattern  (Figure  1).  As  an  n-alectical 
+structure, ch’ixi embodies the idea that something can be both true and false depending on context, or that 
+two contradictory statements may be simultaneously sustained without mutual cancellation. For instance, 
+a person may feel fully Indigenous and yet modern, without needing to choose a singular identity—both 
+“truths” coexist in the individual, even though they may appear mutually exclusive from the standpoint 
+of classical logic [27]. 
+
+This  concept  challenges  the  Aristotelian  principle  of  non-contradiction,  aligning  more  closely  with 
+fuzzy or paraconsistent logics [28], in which a proposition may be partially true and partially false at the 
+same  time.  Ch’ixi  thought  invites  one  to  “voluntarily  inhabit  discomfort  and  questioning,”  embracing 
+ambiguity rather than rushing to resolve it. This discomfort is fertile—it enables antagonistic perspectives 
+to coexist and engage in dialogue. 
+
+In the ethics of AI, a ch’ixi approach is valuable for addressing the uncertainties and incompatibilities 
+that  arise  in  the  interaction  between  modern  technologies  and  traditional  cultures.  For  example,  when 
+introducing a medical diagnostic AI system into an Indigenous community, tensions may surface between 
+the Western biomedical worldview (based on data and molecular biology) and the community’s traditional 
+
+Maikel Y. Leyva Vázquez , Noel Batista Hernandez, Edwin Alberto Callejasand Florentin Smarandache, Multi-Neutrosophic Ayni 
+Method Based on Ancestral Logic and N-Alectic Reasoning for Ethical AI and Sustainability 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Neutrosophic Sets and Systems, {Special Issue: Artificial Intelligence, Neutrosophy, and Latin American 
+Worldviews: Toward a Sustainable Future (Workshop – March 18–21, 2025, Universidad Tecnológica 
+de El Salvador, San Salvador, El Salvador)}, Vol. 84, 2025         
+
+5 
+
+medicine  (rooted  in  spirituality  and  herbal  knowledge).  A  conventional  approach  might  view  these  as 
+mutually  exclusive—one  must  be  imposed  as  “true,”  the  other  dismissed  as  “false  superstition.”  In 
+contrast, a ch’ixi perspective would aim for coexistence [29]: AI might be used for rapid disease detection, 
+while  traditional  treatments  are  simultaneously  respected  and  practiced  for  other  conditions  or  for  the 
+patient's  spiritual  balance.  The  two  visions  are  not  forcibly  merged  but  allowed  to  interact  in  creative 
+tension, combining the strengths of each. 
+
+This contradictory pluralism acknowledges that not everything can be perfectly integrated—ideological 
+frictions  will  persist—yet  collaboration  in  pursuit  of  shared  goals  (such  as  community  health)  remains 
+possible.  Similarly,  in  the  realm  of  data,  a  ch’ixi  approach  would  accept  that  the  Western  notion  of 
+individual data ownership and the Indigenous view of knowledge as sacred and communal may clash [30]. 
+Rather than enforcing a single data policy, a dual system could be designed: some data are governed by 
+traditional  community  protocols  (e.g.,  prior  consultation,  collective  consent),  while  others  are  managed 
+through modern frameworks—both structures coexisting within the digital ecosystem. 
+
+Such “informational mestizaje” may seem inconsistent to purists on either side, but ch’ixi teaches that 
+from apparent incoherence may arise a more inclusive and resilient practice, better adapted to real-world 
+complexity. In sum, ch’ixi contributes to ethical AI by promoting comfort with contradiction: the capacity 
+to design systems in which different logics coexist and solutions are not uniform but patchworked, flexible, 
+and context-specific—reflecting diversity without erasing it. 
+
+2.1.4 In Lak’ech – Relationality and Universal Reciprocity 
+
+In Lak’ech is an expression of Mayan wisdom and simultaneously a deeply relational ethical principle. 
+Commonly translated as “I am another you; you are another me,” it encapsulates the notion that individual 
+existence has no meaning in isolation from others. Although the authenticity of this exact phrase has been 
+debated—and according to specialists, it is not commonly used in daily conversation among Maya speakers 
+and  may  represent  a  very  literal  translation—the  phrase  still  accurately  conveys  the  essential  Mayan 
+philosophical idea of interconnectedness and collectivity. As the Yucatec tradition explains: “I do not exist 
+without you, and you do not exist without me. Therefore, you and I exist through our relationship. 
+
+The  Mayan  worldview  [32]  conceives  the  universe  as  a  vast  web  of  interdependence:  individuals, 
+communities, animals, plants, winds, spirits, and ancestors are all interconnected, and nothing exists apart 
+from its relationships. Each being exists because it participates in a greater we, which also includes nature. 
+From this stems an ethic of reciprocity: “If I respect you, I respect myself; if I harm you, I harm myself.” 
+This  is  not  merely  a  poetic  metaphor  but  a  literal  understanding  of  reality:  the  harm  done  to  another 
+being—human or nonhuman—inevitably reflects back since individual identity is constituted by relational 
+ties. 
+
+Figure 2. Joya de Cerén archaeological site, known as the "Pompeii of the Americas," El Salvador. Photograph taken by the 
+authors, depicting Maya ruins with residential structures exceptionally preserved due to a volcanic eruption around 
+600 AD 
+
+Maikel Y. Leyva Vázquez , Noel Batista Hernandez, Edwin Alberto Callejasand Florentin Smarandache, Multi-Neutrosophic Ayni 
+Method Based on Ancestral Logic and N-Alectic Reasoning for Ethical AI and Sustainability 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Neutrosophic Sets and Systems, {Special Issue: Artificial Intelligence, Neutrosophy, and Latin American 
+Worldviews: Toward a Sustainable Future (Workshop – March 18–21, 2025, Universidad Tecnológica 
+de El Salvador, San Salvador, El Salvador)}, Vol. 84, 2025         
+
+6 
+
+In this context, the Mayan concept of zero (nik'), a mathematical and cosmological innovation, reinforces 
+the non-dual and cyclical character of this worldview (Figure 3). Far from representing mere absence, the 
+Mayan zero signifies a moment of transition, a state of potentiality from which life and time emerge and 
+return. This idea resonates with neutrosophic logic, especially in its n-alethic formulation, which allows for 
+the coexistence of truth (T), falsehood (F), and indeterminacy (I) within any proposition. Just as zero is not 
+an absolute void but a threshold within a cycle, In Lak’ech reflects a relational ethics where meaning arises 
+from dynamic  interconnection  rather  than  isolated  certainty.  Both  systems—Mayan  and neutrosophic—
+reject rigid binaries and embrace multiplicity, change, and contextual knowledge as fundamental. As Batz 
+[33] explains, the Mayan zero is a vital symbol of interdependence, echoing the ontological commitments 
+of relational philosophies like neutrosophy. 
+
+Figure 3. Representation of the Maya zero (Nik) as a flower in the Codex Fejérváry-Mayer. This image, taken from a pre-
+Columbian Aztec codex of central Mexico, illustrates cosmological and calendrical symbolism. The right panel 
+emphasizes the depiction of Nik, the Maya concept of zero, as a floral glyph. Adapted from Batz [33], retrieved from 
+https://baas.aas.org/pub/2021n1i336p03/release/2. 
+
+Within a neutrosophic n-alectical framework, In  Lak’ech can be understood as a transcendence of the 
+self–other duality through a third mediating term: the we. Rather than viewing the self and the other as 
+mutually  exclusive,  this  Mayan  principle  affirms  both  relational  unity  and  individual  distinctiveness—
+"you are another me" implies not fusion, but co-existence. This philosophical tension finds resolution in 
+community, which functions as an inclusive middle ground. A powerful symbol of this duality-in-unity is 
+the Maya concept of zero [34]. Far from denoting absolute nothingness, the Maya zero signifies a fertile 
+void, a moment of pause, transition, and interconnected potentiality. This symbolic neutrality echoes the 
+indeterminate (I) component in neutrosophic logic, where meaning and value exist in fluctuating degrees 
+of truth, falsity, and indeterminacy, shaped by relational and contextual dynamics. 
+
+Applied to AI ethics, In Lak’ech demands a reorientation from extractive, anthropocentric approaches 
+toward  a  relational  ethics  grounded  in  reciprocity  and  interconnectedness.  Decisions  must  consider  all 
+members of the web of life—humans, nonhumans, and the environment—as part of a unified web. This 
+principle calls for inclusive practices in data governance, especially with respect to Indigenous sovereignty 
+and  participatory  design.  Echoing  the  regenerative  symbolism  of  the  Maya  zero,  AI  systems  should  be 
+conceived  not  as  tools  of  domination,  but  as  technologies  of  care—restorative  acts  that  reflect  our 
+interconnected self. In this sense, In Lak’ech becomes a guiding ethic for developing AI that nurtures rather 
+than exploits, embedding in every algorithm a recognition of the Other as integral to the Self. 
+
+Maikel Y. Leyva Vázquez , Noel Batista Hernandez, Edwin Alberto Callejasand Florentin Smarandache, Multi-Neutrosophic Ayni 
+Method Based on Ancestral Logic and N-Alectic Reasoning for Ethical AI and Sustainability 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Neutrosophic Sets and Systems, {Special Issue: Artificial Intelligence, Neutrosophy, and Latin American 
+Worldviews: Toward a Sustainable Future (Workshop – March 18–21, 2025, Universidad Tecnológica 
+de El Salvador, San Salvador, El Salvador)}, Vol. 84, 2025         
+
+7 
+
+2.1.5 Nepantla as an N-Alethic Threshold: Creative Ambiguity and Sustained Transition 
+
+The concept of nepantla, originating from Nahuatl, refers to being “in-between” or in “no man’s land”—
+a liminal space between two worlds, cultures, or states of being. Beyond its linguistic connotation, thinkers 
+such as Gloria Anzaldúa [35] have reclaimed nepantla as an existential and political category that allows 
+one to inhabit simultaneously both the old and the new, the imposed and the original, without erasing the 
+tensions that arise between them. Nepantla thus becomes a state of fertile ambiguity, where certainties are 
+fractured,  but  where  new  identities,  expanded  worldviews,  or  more  integrative  value  systems  can  also 
+emerge. 
+
+From  the  standpoint  of  n-alethic  reasoning,  nepantla  is  not  a  state  of  paralysis  or  irresolvable 
+contradiction,  but  rather  a  complex  configuration  in  which  elements  of  truth  (T),  falsehood  (F),  and 
+indeterminacy  (I)  coexist.  This  logic,  developed  within  the  framework  of  Florentin  Smarandache’s 
+neutrosophy, breaks away from classical binary logics by allowing ideas, beliefs, or systems to be evaluated 
+not only as true or false, but also as partially true, contradictory, or uncertain to varying degrees. In this 
+sense,  nepantla  represents  a  genuinely  neutrosophic  space—where  knowledges  in  tension  coexist,  and 
+where the boundaries between opposites blur, giving rise to hybrid possibilities[36]. 
+
+Applied to the field of sustainability, nepantla can be interpreted as the threshold of transition between 
+an  unsustainable  paradigm  and  an  emerging  one.  In  this  transitional  zone,  decisions  and  actions  are 
+imbued  with  uncertainty:  old  structures  persist  while  new  ones  have  yet  to  consolidate  [37].  From  a 
+conventional  logic  perspective,  this  period  might  appear  chaotic  or  unproductive;  yet from  an  n-alethic 
+standpoint, this intermediate state is both necessary and revealing. It allows us to recognize that there is no 
+single pathway toward a sustainable future, but rather multiple trajectories that must engage in dialogue, 
+complement, or even contradict one another in order to foster authentic transformation. 
+
+Nepantla,  as  experienced  by  many  Indigenous  communities,  especially  under  the  pressures  of 
+colonization and globalization, represents a cultural and epistemic space where ancestral knowledge and 
+modern technologies like AI intersect. This “technological nepantla” embodies creative tension rather than 
+contradiction, making it fertile ground for applied neutrosophy. Within an n-alethic framework, nepantla 
+becomes a dynamic threshold—a space of ambiguity and coexistence—through which new, inclusive, and 
+sustainable forms of knowledge and governance can emerge. 
+
+2.2 MultiNeutrosophic Sets and N-Alethic Logic to Represent Epistemic Plurality 
+
+In  order  to  formally  model  the  complex,  fluid,  and  often  contradictory  structures  that  characterize 
+Indigenous epistemologies—such as Nepantla, In Lak’ech, Ch’ixi, Yanantin, and Buen Vivir—we turn to the 
+framework of Neutrosophic Logic. This advanced logic enables the simultaneous representation of truth, 
+falsehood,  and  indeterminacy,  offering  a  formal  structure  for  n-alethic  reasoning.  The  foundational 
+elements  of  Neutrosophic  Sets,  along  with  their  refined  and  multi-valued  extensions,  provide  the 
+mathematical  tools  necessary  to  express  these  ancestral  concepts  not  as  symbolic  metaphors,  but  as 
+rigorous components of ethical, sustainable, and intercultural systems design [38]. 
+
+The following definitions outline the basic constructs of Neutrosophic Sets: 
+
+Definition  1  [39]:  The  Neutrosophic  set  N  is  defined  by  three  membership  functions:  the  truth-
+membership  function  𝑻𝑨 ,  the  indeterminacy-membership  function  𝑰𝑨 ,  and  the  falsehood-membership 
+function  𝑭𝑨, with U representing the Universe of Discourse. and  𝐱𝐔,  𝑻𝑨(𝒙), 𝑰𝑨(𝒙), 𝑭𝑨(𝒙)] 𝟎− , 𝟏+[, and 
+𝟎−  𝐢𝐧𝐟 𝑻𝑨(𝒙) + 𝐢𝐧𝐟 𝑰𝑨(𝒙) + 𝐢𝐧𝐟 𝑭𝑨(𝐱)  𝐬𝐮𝐩 𝑻𝑨(𝐱) + 𝐬𝐮𝐩 𝑰𝑨(𝐱) + 𝐬𝐮𝐩 𝑭𝑨(𝐱) 𝟑+. 
+
+According  to  the  definition,  𝑻𝑨(𝒙), 𝑰𝑨(𝒙),  and  𝑭𝑨(𝒙)  are  real  standard  or  non-standard  subsets  of 
+] 𝟎− , 𝟏+[  and  hence,  𝑻𝑨(𝒙), 𝑰𝑨(𝒙)  and  𝑭𝑨(𝒙)  can  be  sub-intervals  of  [𝟎, 𝟏].  𝟎−   and  𝟏+  belong  to  the  set 
+of hyperreal numbers. 
+
+Maikel Y. Leyva Vázquez , Noel Batista Hernandez, Edwin Alberto Callejasand Florentin Smarandache, Multi-Neutrosophic Ayni 
+Method Based on Ancestral Logic and N-Alectic Reasoning for Ethical AI and Sustainability 
+
+ 
+ 
+ 
+ 
+ 
+ 
+Neutrosophic Sets and Systems, {Special Issue: Artificial Intelligence, Neutrosophy, and Latin American 
+Worldviews: Toward a Sustainable Future (Workshop – March 18–21, 2025, Universidad Tecnológica 
+de El Salvador, San Salvador, El Salvador)}, Vol. 84, 2025         
+
+8 
+
+Definition  2 
+
+[40]:  The  Single-Valued  Neutrosophic  Set 
+
+(SVNS)  𝑨   over  𝑼   is  𝑨  =   {<
+𝒙, 𝑻𝑨(𝒙), 𝑰𝑨(𝒙), 𝑭𝑨(𝒙) > : 𝒙𝑼},  where  𝑻𝑨: 𝑼→[𝟎, 𝟏],  𝑰𝑨: 𝑼→[𝟎, 𝟏]  and  𝑭𝑨: 𝑼→[𝟎, 𝟏].  𝟎 𝑻𝑨(𝒙) + 𝑰𝑨(𝒙) +
+𝑭𝑨(𝒙) 𝟑.The  Single-Valued  Neutrosophic  Number  (SVNN)  is  symbolized  by  𝑵  =   (𝒕, 𝒊, 𝒇 ),  such  that 
+𝟎 𝒕, 𝒊, 𝒇  𝟏  and  𝟎 𝒕 + 𝒊 + 𝒇𝟑. 
+
+Indigenous cosmovisional principles such as nepantla, In Lak’ech, ch’ixi, yanantin, and Buen Vivir (Sumak 
+Kawsay) embody ways of thinking that challenge traditional binary logics by operating within an n-alethic 
+structure—one in which truth, falsehood, and indeterminacy coexist. This logic can be formalized through 
+the  Refined Neutrosophic  Set  (RNS),  which decomposes  the  classical  components  of  neutrosophic  logic 
+into  sublevels  of  truth  (𝑇ᵢ),  indeterminacy  (𝐼ᵢ),  and  falsehood  (𝐹ᵢ),  along  with  its  isomorphic  model,  the 
+MultiNeutrosophic  Set  (MNS).  These  structures  make  it  possible  to  accurately  represent  complex, 
+ambiguous, or transitional contexts—precisely the types of realities described by these ancestral principles 
+[10]. 
+
+Thus,  both  Refined  Neutrosophic  Sets  [41]  and  MultiNeutrosophic  Sets[42]  not  only  enable  the 
+
+representation of these n-alethic structures but also support their application in fields such as AI ethics, 
+
+sustainability, and intercultural decision-making. This articulation between advanced mathematical logic 
+
+and ancestral wisdom not only validates Indigenous epistemologies in formal terms but also enriches the 
+
+understanding and design of technological systems that are more just, inclusive, and in harmony with life. 
+
+Definition 3 [42]. The Subset Refined Neutrosophic Set (SRNS). Let 𝒰 be a universe of discourse, and a 
+set  𝑅 ⊂ 𝒰. Then a Subset Refined Neutrosophic R is defined as follows:  𝑅 = {𝑥, 𝑥(𝑇, 𝐼, 𝐹), 𝑥 ∈ 𝑈},  where T 
+is  refined/split  into  p  sub-truths,  𝑇 = 〈𝑇1, 𝑇2, … 𝑇𝑝〉, 𝑇𝑗 ⊆ [0,1], 1 ≤ 𝑗 ≤ 𝑝 ;  I  is  refined/split  into  r  sub-
+indeterminacies,  𝐼 = 〈𝐼1, 𝐼2, … 𝐼𝑟〉, 𝐼𝑘 ⊆ [0,1], 1 ≤ 𝑘 ≤ 𝑟,   and  F  is  refined/split  into  s  sub-falsehoods,  𝐹 =
+〈𝐹1, 𝐹2, … 𝐹𝑙〉, 𝐹𝑠 ⊆ [0,1], 1 ≤ 𝑙 ≤ 𝑠,  where  𝑝, 𝑟, 𝑠  ≥  0  are  integers,  and  𝑝  +  𝑟  +  𝑠  =  𝑛  ≥  2,  and  at  least 
+one of  𝑝, 𝑟, 𝑠 𝑖𝑠  ≥  2  to ensure the existence of refinement (splitting). 
+
+Definition  4  [42].  The  MultiNeutrosophic  Set  (or  Subset  MultiNeutrosophic  Set  SMNS).  Let  𝒰  be  a 
+
+is:  𝑀 =
+universe  of  discourse  and  M  a  subset  of 
+{𝑥, 𝑥(𝑇1, 𝑇2, . . . , 𝑇𝑝; 𝐼1, 𝐼2, . . . , 𝐼𝑟; 𝐹1, 𝐹2, . . . , 𝐹𝑠)}, 𝑥  ∈  𝑈,where 𝑝, 𝑟, 𝑠 are integers  ≥ 0, 𝑝 + 𝑟 + 𝑠 = 𝑛 ≥ 2   and at 
+least one of  𝑝, 𝑟, 𝑠 𝑖𝑠 ≥ 2,  to ensure the existence of a multiplicity of at least one neutrosophic component: 
+
+it.  Then,  a  MultiNeutrosophic  Set 
+
+truth/membership, 
+𝑇1, 𝑇2, . . . , 𝑇𝑝; 𝐼1, 𝐼2, . . . , 𝐼𝑟; 𝐹1, 𝐹2, . . . , 𝐹𝑠   ⊆ [0,1];
+𝑝
+∑
+𝑖𝑛𝑓 𝐼𝑘 +
+𝑗=1
+
+indeterminacy, 
+
+∑ 𝑖𝑛𝑓 𝐹𝑙 ≤
+
+𝑖𝑛𝑓 𝑇𝑗 +
+
+𝑟
+∑
+𝑘=1
+
+𝑝
+∑
+𝑗=1
+
+𝑠
+𝑙=1
+
+or 
+
+falsehood/non-membership; 
+
+all 
+
+subsets 
+0 ≤
+
+𝑠𝑢𝑝 𝑇𝑗 +
+
+𝑟
+∑
+𝑘=1
+
+𝑠𝑢𝑝 𝐼𝑘 +
+
+∑ 𝑠𝑢𝑝 𝐹𝑙 ≤ 𝑛.
+
+𝑠
+𝑙=1
+
+This expression establishes the general bounds for refined or multi-valued neutrosophic components. 
+
+It  states  that  the  sum  of  the  minimum  values  (infima)  of  all  truth,  indeterminacy,  and  falsehood 
+
+components must be greater than or equal to zero, while the sum of their maximum values (suprema) must 
+
+not  exceed  a  total  value  n.  This  allows  for  flexible  modeling  of  complex  systems  with  multiple 
+
+subcomponents  of  truth,  uncertainty,  and  falsehood,  without  imposing  additional  restrictions  on  their 
+
+distribution. 
+
+The  element  x,  with  respect  to  the  set  M,  is  characterized  by  a  MultiDegree  of  Truth  (or 
+MultiMembership),  represented  by  the  values 𝑇1, 𝑇2, . . . , 𝑇𝑝 ;  a  MultiDegree  of  Indeterminacy  (or 
+MultiNeutrality),  given  by  𝐼1, 𝐼2, . . . , 𝐼𝑟 and  a  MultiDegree  of  Falsehood  (or  MultiNonmembership), 
+expressed  as  𝐹1, 𝐹2, . . . , 𝐹𝑠   .  Each  of  these  values  captures  distinct  contributions  from  various  sources, 
+enabling a more nuanced representation of the element's status within the set. All these  𝑝  +  𝑟  +  𝑠  =  𝑛  ≥
+
+Maikel Y. Leyva Vázquez , Noel Batista Hernandez, Edwin Alberto Callejasand Florentin Smarandache, Multi-Neutrosophic Ayni 
+Method Based on Ancestral Logic and N-Alectic Reasoning for Ethical AI and Sustainability 
+
+ 
+ 
+ 
+ 
+ 
+ 
+       
+Neutrosophic Sets and Systems, {Special Issue: Artificial Intelligence, Neutrosophy, and Latin American 
+Worldviews: Toward a Sustainable Future (Workshop – March 18–21, 2025, Universidad Tecnológica 
+de El Salvador, San Salvador, El Salvador)}, Vol. 84, 2025         
+
+9 
+
+ 2  components  are  assigned  by  𝑛   sources—whether  fully  independent,  partially  interdependent,  or 
+entirely dependent—according to the needs of each specific application [43]. 
+
+This  multi-source  structure  resonates  with  the  n-alethic  logic  of  Indigenous  philosophies,  where 
+
+multiple,  sometimes  contradictory,  perspectives  coexist  without  requiring  resolution.  Each  truth, 
+
+indeterminacy,  or  falsehood—provided  by  different  experts  or  contexts—mirrors  the  plurivocality  of 
+
+ancestral thought, which values coexistence over binary reduction. 
+
+A generic element x with regard to the MultiNeutrosophic Set A has the form: 
+
+𝑥(𝑇1, 𝑇2, . . . , 𝑇𝑝; 
+
+𝐼1, 𝐼2, . . . , 𝐼𝑟; 
+
+𝐹1, 𝐹2, . . . , 𝐹𝑠) 
+
+multi-truth 
+
+multi-indeterminacy 
+
+multi-falsehood 
+
+In  many  particular  cases  𝑝  =  𝑟  =  𝑠 ,  and  a  source  (expert)  assigns  all  three  degrees  of  truth, 
+
+indeterminacy, and falsehood  𝑇𝑗, 𝐼𝑗, 𝐹𝑗  for the same element. 
+
+The 
+
+ranking  of  n-valued  MultiNeutrosophic 
+
+s)-form, 
+(𝑇1, 𝑇2, . . . , 𝑇𝑝; 𝐼1, 𝐼2, . . . , 𝐼𝑟; 𝐹1, 𝐹2, . . . , 𝐹𝑠),  where  𝑝, 𝑟, 𝑠   are  integers ≥  0,  and  𝑝  +  𝑟  +  𝑠  =  𝑛  ≥  2,  and  at 
+least one of  𝑝, 𝑟, 𝑠  ≥  2  to be sure that it has multiplicity for at least one neutrosophic component (either 
+
+types  of 
+
+same 
+
+the 
+
+(p, 
+
+r, 
+
+truth, or indeterminacy, or falsehood). 
+
+For  ranking  two  n-valued  multi  neutrosophic  tuples  of  the  forms  (𝑝1, 𝑟1, 𝑠1)   and  respectively 
+(𝑝2, 𝑟2, 𝑠2),   where  𝑝1, 𝑟1, 𝑠1, 𝑝2, 𝑟2, 𝑠2   are  integers  ≥ 0 ,  and  𝑝1 + 𝑟1 + 𝑠1 = 𝑛1 ≥ 2,   and  at  least  one  of 
+𝑝1, 𝑟1, 𝑠1𝑖𝑠 ≥ 2,  to be sure that there is multiplicity for at least one neutrosophic component (either truth, or 
+indeterminacy, or falsehood); similarly  𝑝2 + 𝑟2 + 𝑠2 = 𝑛2 ≥ 2,  and at least one of  𝑝2, 𝑟2, 𝑠2 𝑖𝑠 ≥ 2. 
+
+Let’s take the following Single-Valued Multi Neutrosophic Tuples (SVMNT): 
+𝑆𝑉𝑀𝑁𝑇 = (𝑇1, 𝑇2, . . . , 𝑇𝑝; 𝐼1, 𝐼2, . . . , 𝐼𝑟; 𝐹1, 𝐹2, . . . , 𝐹𝑠)  of  (𝑝1, 𝑟1, 𝑠1) − 𝑓𝑜𝑟𝑚, and     
+𝑆𝑉𝑀𝑁𝑇′ = (𝑇′
+
+1, 𝐼′
+
+𝑝; 𝐼′
+
+1, 𝑇′
+
+2, . . . , 𝑇′
+
+2, . . . , 𝐹′
+It  makes  the  classical  averages  of  truth  (𝑇𝑎),  indeterminacies (𝐼𝑎)  and  falsehood  (𝐹𝑎),  respectively  for 
+𝑆𝑉𝑀𝑁𝑇 = (𝑇𝑎, 𝐼𝑎, 𝐹𝑎)  and the averages of truths (𝑇𝑎), indeterminacies (𝐼𝑎) and falsehood (𝐹𝑎) respectively 
+for:  𝑆𝑉𝑀𝑁𝑇 = (𝑇′
+𝑎). And then it applies the Score (𝑆), Accuracy (𝐴), and Certainty (𝐶) Functions, 
+
+𝑠)  of  (𝑝1, 𝑟1, 𝑠1) − 𝑓𝑜𝑟𝑚. 
+
+2, . . . , 𝐼′
+
+𝑟; 𝐹′
+
+1, 𝐹′
+
+𝑎, 𝐼′
+as for the single-valued neutrosophic set: 
+
+𝑎, 𝐹′
+
+Compute the Score Function (average of positiveness) (7). 
+
+𝑆(𝑇𝑎, 𝐼𝑎, 𝐹𝑎) =
+
+𝑇𝑎 + (1 − 𝐼𝑎) + (1 − 𝐹𝑎)
+3
+
+𝑆(𝑇′
+
+𝑎, 𝐼′
+
+𝑎, 𝐹′
+
+𝑎) =
+
+𝑇′
+
+𝑎 + (1 − 𝐼′
+
+𝑎) + (1 − 𝐹′
+3
+
+𝑎)
+
+                        (1) 
+
+i. 
+
+𝑎, 𝐼′
+If  𝑆(𝑇𝑎, 𝐼𝑎, 𝐹𝑎) ≥  𝑆(𝑇′
+𝑎, 𝐼′
+If  𝑆(𝑇𝑎, 𝐼𝑎, 𝐹𝑎) ≤  𝑆(𝑇′
+ii. 
+iii.  And if  𝑆(𝑇𝑎, 𝐼𝑎, 𝐹𝑎) =  𝑆(𝑇′
+
+𝑎)  then  𝑆𝑉𝑀𝑁𝑇 ≥ 𝑆𝑉𝑀𝑁𝑇′, 
+𝑎)  then  𝑆𝑉𝑀𝑁𝑇 ≤ 𝑆𝑉𝑀𝑁𝑇′, 
+𝑎, 𝐹′
+Compute the Accuracy Function (difference between the truth and falsehood) (8). 
+
+𝑎, 𝐹′
+𝑎, 𝐹′
+𝑎, 𝐼′
+
+𝑎)  then  𝑆𝑉𝑀𝑁𝑇 = 𝑆𝑉𝑀𝑁𝑇′, then go to the second step. 
+
+Maikel Y. Leyva Vázquez , Noel Batista Hernandez, Edwin Alberto Callejasand Florentin Smarandache, Multi-Neutrosophic Ayni 
+Method Based on Ancestral Logic and N-Alectic Reasoning for Ethical AI and Sustainability 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Neutrosophic Sets and Systems, {Special Issue: Artificial Intelligence, Neutrosophy, and Latin American 
+Worldviews: Toward a Sustainable Future (Workshop – March 18–21, 2025, Universidad Tecnológica 
+de El Salvador, San Salvador, El Salvador)}, Vol. 84, 2025         
+
+10 
+
+𝐴(𝑇𝑎, 𝐼𝑎, 𝐹𝑎) = 𝑇𝑎 − 𝐹𝑎 
+
+𝐴(𝑇′
+
+𝑎, 𝐼′
+
+𝑎, 𝐹′
+
+𝑎) = 𝑇𝑎
+
+′ 
+′ − 𝐹𝑎
+
+                      (2) 
+
+i. 
+
+𝑎, 𝐼′
+If  𝐴(𝑇𝑎, 𝐼𝑎, 𝐹𝑎) ≥  𝐴(𝑇′
+𝑎, 𝐼′
+If  𝐴(𝑇𝑎, 𝐼𝑎, 𝐹𝑎) ≤  𝐴(𝑇′
+ii. 
+iii.  And if  𝐴(𝑇𝑎, 𝐼𝑎, 𝐹𝑎) =  𝐴(𝑇′
+
+𝑎, 𝐹′
+𝑎, 𝐹′
+𝑎, 𝐼′
+
+𝑎)  then  𝑆𝑉𝑀𝑁𝑇 ≥ 𝑆𝑉𝑀𝑁𝑇′, 
+𝑎)  then  𝑆𝑉𝑀𝑁𝑇 ≤ 𝑆𝑉𝑀𝑁𝑇′, 
+𝑎, 𝐹′
+
+𝑎)  then  𝑆𝑉𝑀𝑁𝑇 = 𝑆𝑉𝑀𝑁𝑇′, then go to the third step. 
+
+3. Compute the Certainty Function (truth) (9). 
+
+𝐶(𝑇𝑎, 𝐼𝑎, 𝐹𝑎) = 𝑇𝑎 
+
+𝐶(𝑇′
+
+𝑎, 𝐼′
+
+𝑎, 𝐹′
+
+′ 
+𝑎) = 𝑇𝑎
+
+                      (3) 
+
+i. 
+
+𝑎, 𝐹′
+If  𝐶(𝑇𝑎, 𝐼𝑎, 𝐹𝑎) ≥  𝐶(𝑇′
+𝑎, 𝐹′
+If  𝐶(𝑇𝑎, 𝐼𝑎, 𝐹𝑎) ≤  𝐶(𝑇′
+ii. 
+iii.  And  if  𝐶(𝑇𝑎, 𝐼𝑎, 𝐹𝑎) =  𝐶(𝑇′
+’ , 𝐼𝑎 = 𝐼𝑎
+
+equal,  i.e. 
+
+  𝑇𝑎 = 𝑇𝑎
+
+𝑎, 𝐼′
+𝑎, 𝐼′
+
+𝑎)  then  𝑆𝑉𝑀𝑁𝑇 ≥ 𝑆𝑉𝑀𝑁𝑇′, 
+𝑎)  then  𝑆𝑉𝑀𝑁𝑇 ≤ 𝑆𝑉𝑀𝑁𝑇′, 
+𝑎, 𝐼′
+𝑎, 𝐹′
+’ , 𝐹𝑎 = 𝐹𝑎
+
+𝑎)   then  𝑆𝑉𝑀𝑁𝑇 = 𝑆𝑉𝑀𝑁𝑇′   are  multi-neutrosophically 
+’ ,  or  their  corresponding  truth,  indeterminancy,  and 
+
+falsehood averages are equal. 
+
+When some sources contribute with different levels of importance, weighted averages are used, denoted 
+
+as  𝑇𝑤𝑎, 𝐼𝑢𝑎, 𝐹𝑣𝑎  and  𝑇′
+𝑣𝑎,and for the respective multi-neutrosophic tuples. Since the sources may 
+be fully independent, partially independent, or dependent, the sum of the weights is not constrained to 
+equal  one.  Therefore,  the  weights  𝑤1, 𝑤2, … , 𝑤𝑝,  𝑢1, 𝑢2, … , 𝑢𝑝,  𝑣1, 𝑣2, … , 𝑣𝑝are  defined  within  the  interval 
+
+𝑢𝑎, 𝐹′
+
+𝑤𝑎, 𝐼′
+
+[0,1],  and  their  sums  may  be  less  than,  equal  to,  or  greater  than  1.  The  Score,  Accuracy,  and  Certainty 
+
+functions are then applied to these weighted averages to establish a more nuanced ranking of the multi-
+
+neutrosophic elements. 
+
+3. Material and Methods   
+
+This study employs Multi-Neutrosophic Sets (MNS) as a formal mechanism to represent the coexistence 
+
+of  diverse  ethical  judgments  in  culturally  heterogeneous  environments.  In  neutrosophic  logic,  any 
+
+proposition—such  as  “This  AI  system  improves  community  health”—is  evaluated  in  terms  of  its  truth 
+
+value (T), indeterminacy (I), and falsity (F), each ranging independently from 0 to 1. The refined version 
+allows for multiple sources or degrees of each component:  𝑇  =   {𝑇1, 𝑇2, … , 𝑇𝑝},    𝐼  =   {𝐼1, 𝐼2, … , 𝐼𝑟}, and  𝐹  =
+ {𝐹1, 𝐹2, … , 𝐹𝑠}, reflecting plural and possibly conflicting viewpoints. 
+
+This structure is ideal for n-alethic reasoning, which embraces the coexistence of truths, falsehoods, and 
+
+uncertainties  without  enforcing  binary  resolution.  Particularly  in  AI  ethics  applied  to  healthcare,  the 
+
+interplay  between  ancestral  knowledge  systems  and  algorithmic  models  generates  zones  of  ambiguity 
+
+(nepantla)  and  contradiction  (ch’ixi),  which  require  ethical  reasoning  attuned  to  tension,  dialogue,  and 
+
+negotiated consensus. 
+
+This  paper  introduces  an  approach  referred  to  as  the  Multi-Neutrosophic  Ayni  Method,  which  is 
+
+inspired by the Andean principle of Ayni—a form of reciprocal and ethical co-existence that values balance, 
+
+Maikel Y. Leyva Vázquez , Noel Batista Hernandez, Edwin Alberto Callejasand Florentin Smarandache, Multi-Neutrosophic Ayni 
+Method Based on Ancestral Logic and N-Alectic Reasoning for Ethical AI and Sustainability 
+
+ 
+ 
+ 
+ 
+ 
+ 
+Neutrosophic Sets and Systems, {Special Issue: Artificial Intelligence, Neutrosophy, and Latin American 
+Worldviews: Toward a Sustainable Future (Workshop – March 18–21, 2025, Universidad Tecnológica 
+de El Salvador, San Salvador, El Salvador)}, Vol. 84, 2025         
+
+11 
+
+mutual respect, and dynamic harmony—this method models the ethical interplay between diverse sources 
+
+of judgment without forcing unification [12]. Rather than eliminating differences, it honors them through 
+
+a  formal  structure  that  enables  negotiated  convergence.  The  name  reflects  both  the  mathematical 
+
+foundation in neutrosophic logic and the intercultural epistemology it seeks to respect and operationalize. 
+
+As  a  novel  contribution,  this  article  introduces  a  Neutrosophic  Consensus  Measure  [44]  based  on 
+
+Euclidean  distance,  designed  to  quantify  the  degree  of  alignment—or  divergence—among  the  various 
+
+evaluations provided by multiple sources. Rather than imposing agreement, this measure preserves the 
+
+integrity of plural perspectives while offering a metric to identify convergence zones in intercultural ethical 
+
+deliberation. Such an approach enhances decision-making processes by foregrounding epistemic diversity 
+
+as a strength rather than a limitation. 
+
+Definition 5: Euclidean Multi-Neutrosophic Consensus Measure 
+
+Let   
+𝒙(𝑻𝟏, 𝑻𝟐, . . . , 𝑻𝒑; 𝑰𝟏, 𝑰𝟐, . . . , 𝑰𝒓; 𝑭𝟏, 𝑭𝟐, . . . , 𝑭𝒔)   
+
+(4) 
+
+be  a  Multi-Neutrosophic  assessment  of  an  element  𝑥 ∈ 𝑈,  where  each  component  reflects  values  from 
+
+distinct sources. 
+
+Let:   
+
+𝑇̅ = 1
+𝑝
+
+𝑝
+∑
+𝑗=1
+
+𝑇𝑗
+
+𝐼̅ = 1
+𝑟
+
+𝑟
+∑
+𝑘=1
+
+𝐼𝑘
+
+𝐹̅ = 1
+𝑠
+
+𝑠
+∑ 𝐹𝑙
+𝑙=1
+
+Then, the Neutrosophic Consensus Measure  𝐶𝑥    is defined as: 
+
+𝐶𝑥 = 1 − 1
+
+3
+
+  (√
+
+1
+
+𝑝
+
+∑ (𝑇𝑗 − 𝑇̅)
+
+𝑝
+𝑗=1
+
+2
+
+𝑟
++ √∑
+𝑘=1
+
+1
+
+𝑟
+
+(𝐼𝑘 − 𝐼̅)2
+
++ √1
+𝑠
+
+∑ (𝐹𝑙 − 𝐹̅)2
+
+𝑠
+𝑙=1
+
+) 
+
+(5) 
+
+(6) 
+
+(7) 
+
+(8) 
+
+where  𝒑,  𝒓, and  𝒔  represent the number of truth, indeterminacy, and falsity values, respectively, and  𝒏 =
+𝒑 + 𝒓 + 𝒔  is the total number of neutrosophic values. 
+
+The result  𝑪𝒙 ∈ [𝟎, 𝟏], where: 
+
+𝑪𝒙 = 𝟏  indicates maximum consensus (no dispersion), 
+
+𝑪𝒙 ≈ 𝟏  indicates minimum consensus (maximum dispersion). 
+
+Maikel Y. Leyva Vázquez , Noel Batista Hernandez, Edwin Alberto Callejasand Florentin Smarandache, Multi-Neutrosophic Ayni 
+Method Based on Ancestral Logic and N-Alectic Reasoning for Ethical AI and Sustainability 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Neutrosophic Sets and Systems, {Special Issue: Artificial Intelligence, Neutrosophy, and Latin American 
+Worldviews: Toward a Sustainable Future (Workshop – March 18–21, 2025, Universidad Tecnológica 
+de El Salvador, San Salvador, El Salvador)}, Vol. 84, 2025         
+
+12 
+
+This  measure  reflects  the  degree  of  alignment  among  diverse  sources,  without  requiring  exact 
+
+agreement, making it especially suited for ethical evaluations in intercultural and plural settings. 
+
+To operationalize plural ethical evaluation in culturally diverse contexts, this study proposes the Multi-
+
+Neutrosophic  Ayni  Method—a  stepwise  approach  that  integrates  ancestral  relational  ethics  (Ayni)  with 
+
+neutrosophic logic to assess the acceptability of socio-technical systems. The method proceeds as follows 
+
+(Figure 4): 
+
+Figure 4. Multi-Neutrosophic Ayni Method 
+
+Step 1: Multi-Stakeholder Identification 
+
+Identify a diverse set of stakeholders involved in or affected by the proposed intervention. These may 
+
+include  technical  experts,  community  elders,  traditional  knowledge  holders,  public  officials,  and  other 
+
+Maikel Y. Leyva Vázquez , Noel Batista Hernandez, Edwin Alberto Callejasand Florentin Smarandache, Multi-Neutrosophic Ayni 
+Method Based on Ancestral Logic and N-Alectic Reasoning for Ethical AI and Sustainability 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Neutrosophic Sets and Systems, {Special Issue: Artificial Intelligence, Neutrosophy, and Latin American 
+Worldviews: Toward a Sustainable Future (Workshop – March 18–21, 2025, Universidad Tecnológica 
+de El Salvador, San Salvador, El Salvador)}, Vol. 84, 2025         
+
+13 
+
+relevant actors. Define a consensus threshold (θ), where θ ∈ [0, 1], as a predefined value that depends on 
+
+the context. 
+
+Step 2: Neutrosophic Elicitation 
+
+Each  stakeholder  evaluates  a  given  ethical  proposition  (e.g.,  “This  AI  system  is  beneficial  and  ethically 
+
+appropriate”) in terms of: 
+
+•  Truth (T) – perceived ethical and practical validity. 
+
+• 
+
+Indeterminacy (I) – uncertainty or unresolved concerns. 
+
+•  Falsehood (F) – perceived ethical harm or inappropriateness. 
+
+Each component can be expressed as a set of degrees  𝑇 = {𝑇1, … , 𝑇𝑝},  𝐼 = {𝐼1, … , 𝐼𝑟},  𝐹 = {𝐹1, … , 𝐹𝑠}, forming 
+
+a Multi-Neutrosophic Tuple. 
+
+Step 3: Compute Aggregated Values 
+
+Calculate the average of each component: 
+
+𝑇̅ =
+
+1
+
+𝑝
+
+∑
+
+𝑝
+𝑗=1
+
+,  𝐼̅ =
+
+𝑇𝑗
+
+1
+
+𝑟
+
+∑
+
+𝑟
+𝑘=1
+
+𝐼𝑘
+
+,  𝐹̅ =
+
+1
+
+𝑠
+
+𝑠
+∑ 𝐹𝑙
+𝑙=1
+
+(9) 
+
+Step 4: Calculate Neutrosophic Score and Accuracy 
+
+Use the score function: 
+
+𝑆 = 1
+3
+
+(𝑇̅ + (1 − 𝐼̅) + (1 − 𝐹̅))  
+
+and the accuracy function: 
+
+𝐴 = 𝑇̅ − 𝐹̅ 
+
+                (10) 
+
+        (11) 
+
+These values provide a quantitative reflection of collective ethical alignment and divergence. 
+
+Step 5: Compute the Euclidean Multi-Neutrosophic Consensus Measure 
+
+To assess the level of convergence among stakeholders, calculate  𝐶𝑥  (8). 
+
+Consensus Threshold Rule: If  𝐶𝑥 < 𝜃, a new deliberative round is initiated to address dissent and refine 
+
+the proposal. 
+
+Maikel Y. Leyva Vázquez , Noel Batista Hernandez, Edwin Alberto Callejasand Florentin Smarandache, Multi-Neutrosophic Ayni 
+Method Based on Ancestral Logic and N-Alectic Reasoning for Ethical AI and Sustainability 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Neutrosophic Sets and Systems, {Special Issue: Artificial Intelligence, Neutrosophy, and Latin American 
+Worldviews: Toward a Sustainable Future (Workshop – March 18–21, 2025, Universidad Tecnológica 
+de El Salvador, San Salvador, El Salvador)}, Vol. 84, 2025         
+
+14 
+
+Step 6: Ayni-Based Adjustment 
+
+If the consensus threshold is not met, a culturally grounded process of Ayni is activated: 
+
+• 
+
+Stakeholders openly express concerns and expectations. 
+
+•  Proposals are ethically renegotiated through community logic, rituals, or symbolic mediation. 
+
+•  Adjustments are made to the technological design or implementation strategy. 
+
+Step 7: Re-evaluation and Iteration 
+
+A second (or subsequent) neutrosophic evaluation is conducted with updated values. If the consensus 
+
+threshold is now exceeded, the proposal moves forward with intercultural legitimacy. Otherwise, further 
+
+dialogue and reformulation may be required. 
+
+This  method  acknowledges  plural  truths,  dynamic  uncertainties,  and  situated  falsehoods,  without 
+
+forcing premature resolution. It promotes ethical alignment not through top-down authority, but through 
+
+dialogical  convergence  rooted  in  both  formal  logic  and  ancestral  reciprocity.  As  such,  the  Multi-
+
+Neutrosophic Ayni Method constitutes a replicable, flexible, and culturally sensitive approach to ethical 
+
+decision-making in AI-driven health systems and beyond. 
+
+4. Illustrative Case – Evaluating an AI Health Diagnostic System in an Indigenous Territory 
+
+A  regional  health  authority  proposes  implementing  an  AI-powered  diagnostic  system  trained  on 
+
+biomedical  data  to  assist  in  early  disease  detection  within  an  Indigenous  community.  The  system  uses 
+
+symptom pattern recognition and predictive modeling to suggest potential diagnoses. 
+
+However,  the  community  has  a  longstanding  tradition  of  ancestral  medicine,  based  on  holistic 
+
+principles involving herbal treatments, spiritual diagnosis, and community rituals. The proposed system, 
+
+while technically promising, raises epistemic tensions with local healers and elders. 
+
+To  evaluate  the  ethical  acceptability  of  the  project,  a  community  assembly  is  convened.  Participants 
+
+include: 
+
+•  Medical AI developer: values the diagnostic precision and scalability of the AI system. 
+
+•  Traditional healer (yachak): emphasizes the risk of spiritual imbalance and cultural erosion. 
+
+•  Community leader: seeks integration but is uncertain about long-term implications. 
+
+•  Public health representatives highlight potential public health benefits. 
+
+•  Young community members: express openness but with questions about trust and respect. 
+
+Each participant offers a multi-neutrosophic evaluation of the proposition: 
+
+“The AI system will be beneficial and ethically appropriate for our community health practices.” 
+
+Maikel Y. Leyva Vázquez , Noel Batista Hernandez, Edwin Alberto Callejasand Florentin Smarandache, Multi-Neutrosophic Ayni 
+Method Based on Ancestral Logic and N-Alectic Reasoning for Ethical AI and Sustainability 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Neutrosophic Sets and Systems, {Special Issue: Artificial Intelligence, Neutrosophy, and Latin American 
+Worldviews: Toward a Sustainable Future (Workshop – March 18–21, 2025, Universidad Tecnológica 
+de El Salvador, San Salvador, El Salvador)}, Vol. 84, 2025         
+
+15 
+
+Situation: The community assembly analyzes the AI project using the Multi-Neutrosophic Ayni Method 
+
+method. 
+
+1.  Sources of truth (T): 
+
+o  p = 3 evaluators (AI developer, public health officer, youth representative) 
+o  Assigned values: 
+
+𝑇 = {0.90, 0.40, 0.30} 
+
+These values reflect a wide range of perceptions—from strong optimism to skepticism—
+
+regarding the system’s technical capabilities and alignment with public health goals. 
+
+2.  Sources of indeterminacy (I): 
+
+o 
+
+r = 2 evaluators (community leader, youth representative) 
+
+o  Assigned values: 
+
+𝐼 = {0.80, 0.20} 
+
+This  reflects  divergent  views  about  cultural  compatibility,  governance,  and  trust  in  AI 
+
+technologies 
+
+3.  Sources of falsity (F): 
+
+o 
+
+s = 2 evaluators (traditional healer, elder community member) 
+
+o  Assigned values: 
+
+𝐹 = { 0.85, 0.25} 
+
+Concerns range from a strong sense of epistemic and spiritual conflict to a more moderate 
+
+skepticism regarding the erosion of ancestral medical practices. 
+
+Final Multi-Neutrosophic Tuple: 
+
+AIHealthProject(0.90, 0.40, 0.30}, {0.80, 0.20}, {0.85, 0.25}) 
+
+Averaged Components: 
+
+•  Truth (T̄) ≈ (0.90 + 0.40 + 0.30)/3 = 0.533 
+
+• 
+
+Indeterminacy (Ī) ≈ (0.80 + 0.20)/2 = 0.50 
+
+•  Falsity (F̄) ≈ (0.85 + 0.25)/2 = 0.55 
+
+Neutrosophic Score Function: 
+
+𝑆 =
+
+T̄ + (1 − Ī) + (1 − F̄ )
+3
+
+=
+
+0.533 + 0.50 + 0.45
+3
+
+≈ 0.494 
+
+Accuracy: 
+
+𝐴 = T̄ − F̄ = 0.533 − 0.55 = −0.17   
+
+Maikel Y. Leyva Vázquez , Noel Batista Hernandez, Edwin Alberto Callejasand Florentin Smarandache, Multi-Neutrosophic Ayni 
+Method Based on Ancestral Logic and N-Alectic Reasoning for Ethical AI and Sustainability 
+
+ 
+ 
+ 
+ 
+ 
+Neutrosophic Sets and Systems, {Special Issue: Artificial Intelligence, Neutrosophy, and Latin American 
+Worldviews: Toward a Sustainable Future (Workshop – March 18–21, 2025, Universidad Tecnológica 
+de El Salvador, San Salvador, El Salvador)}, Vol. 84, 2025         
+
+16 
+
+Consensus Measure (Cₓ): 
+Cₓ ≈ 0.57 
+
+Interpretation: 
+
+      Therefore,  the  Neutrosophic  Consensus  Measure  for  the  AIHealthProject  is  approximately  0.57, 
+
+indicating a moderate level of consensus among the different evaluations. This is closer to agreement (1) 
+
+than complete disagreement (0). Importantly, the Euclidean Multi-Neutrosophic Consensus Measure (Cₓ ≈ 
+
+0.57)  falls  below  the  pre-established  threshold  of  0.9,  signaling  a  lack  of  sufficient  convergence  among 
+
+stakeholder perspectives 
+
+Collective Action and Ayni-Based Adjustment: 
+
+      In  response  to  the  unmet  consensus  threshold,  the  community  assembly  activated  a  participatory 
+
+process grounded in Ayni—the Andean principle of reciprocity and relational balance: 
+
+•  Traditional healers requested formal inclusion of ancestral diagnostic knowledge in the proposed 
+
+system. 
+
+•  Youth  representatives  called  for  mechanisms  to  ensure  transparency  and  ongoing  participatory 
+
+monitoring of the AI’s performance. 
+
+•  A decision was made to pilot the system in parallel with existing traditional practices, rather than 
+
+replacing them. 
+
+•  The community reached agreement on data governance guided by customary law and collective 
+
+consent protocols. 
+
+•  This  dialogical  and  culturally  grounded  refinement  process  led  to  a  second  neutrosophic 
+
+evaluation with increased consensus and improved alignment between technical innovation and 
+
+cultural integrity. 
+
+Second Evaluation (after adjustments): 
+
+•  New values: 
+
+𝑇 = {0.85,0.85,0.75}, 𝐼 = {0.30,0.25}, 𝐹 = {0.40,0.30} 
+
+AIHealthProject({0.85,0.85,0.75},{0.30,0.25},{0.40,0.30}) 
+
+•  New averages: 
+
+•  New Score: 
+
+•  New Accuracy: 
+
+𝑇𝑎 = 0.82,  𝐼𝑎 = 0.275, 𝐹𝑎 = 0.35 
+
+𝑆 =
+
+0.82 + 0.275 + 0.65
+3
+
+≈ 0.73 
+
+𝐴 = 0.82 − 0.35 = 0.47 
+
+Maikel Y. Leyva Vázquez , Noel Batista Hernandez, Edwin Alberto Callejasand Florentin Smarandache, Multi-Neutrosophic Ayni 
+Method Based on Ancestral Logic and N-Alectic Reasoning for Ethical AI and Sustainability 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Neutrosophic Sets and Systems, {Special Issue: Artificial Intelligence, Neutrosophy, and Latin American 
+Worldviews: Toward a Sustainable Future (Workshop – March 18–21, 2025, Universidad Tecnológica 
+de El Salvador, San Salvador, El Salvador)}, Vol. 84, 2025         
+
+17 
+
+•  Consensus Measure: 
+•  𝐶𝑥≈0.94 
+
+        The second evaluation shows a notable improvement in both the score (S ≈ 0.73) and accuracy (A = 
+0.47), indicating stronger ethical support and clearer differentiation between perceived benefits and harms. 
+Crucially, the consensus measure  𝐶𝑥  reached 0.94, which is well above the pre-established threshold of 0.9, 
+signifying high alignment among stakeholders. 
+
+This outcome reflects the success of the Multi-Neutrosophic Ayni Method in facilitating intercultural 
+negotiation  without  suppressing  dissent.  Through  transparent  dialogue  and  culturally  sensitive 
+adjustments, the community was able to refine the project and co-construct an ethical pathway forward. 
+The method thus served as both a quantitative decision-making tool and a relational, epistemically plural 
+mechanism—offering a replicable model for inclusive AI adoption in diverse health systems. 
+
+5. Conclusions   
+
+This work  introduces  an innovative  framework for  evaluating  the  ethics  of  artificial intelligence  and 
+sustainability by integrating n-alectic reasoning with Latin American Indigenous philosophical principles. 
+By  incorporating  Buen  Vivir,  yanantin,  ch’ixi,  In  Lak’ech,  and  nepantla,  it  demonstrates  that  Indigenous 
+worldviews  inherently  reflect  dynamic,  complementary,  and  non-binary  logic  structures.  These  can  be 
+rigorously  formalized  through  Refined  and  Multi-Neutrosophic  Sets,  enabling  the  representation  of 
+multiple truths, uncertainties, and contextual ethical values. This approach offers a powerful ethical lens 
+for assessing AI technologies in intercultural and ecologically sensitive contexts, as illustrated by the case 
+study on Indigenous health. 
+
+Beyond  logical  modeling,  the  article  contributes  the  Multi-Neutrosophic  Ayni  Method—a  culturally 
+rooted  decision-making  process  that blends neutrosophic  consensus  with  ancestral  ethics  of  reciprocity. 
+The  inclusion  of  the  Euclidean  Multi-Neutrosophic  Consensus  Measure  offers  a  practical  tool  to  assess 
+ethical alignment without suppressing diversity, reinforcing the importance of pluralistic deliberation in 
+technology  governance.  Future  directions  include  exploring  weighted  consensus  metrics  that  reflect 
+epistemic  authority  or  community  trust,  and  applying  the  framework  in  areas  like  climate  adaptation, 
+educational  technologies,  and  Indigenous land-use  planning.  Ultimately,  this  work  invites  scholars  and 
+practitioners to engage in intercultural dialogue, co-design technologies with communities, and embrace 
+plural logics that nurture life, diversity, and planetary care. 
+
+References 
+
+[1]    McGee,  R.W.  How  Ethical  Is  Utilitarian  Ethics?  A  Study  in  Artificial  Intelligence.  A  Study  in 
+
+Artificial Intelligence 2024, (February 19, 2024). 
+
+[2]    Lantigua, D. Translating Buen Vivir: Latin American Indigenous Cultures, Stadial Development, 
+
+and Comparative Religious Ethics. Journal of Religious Ethics 2023, 51, 280-320. 
+
+[3]    Odero, B.; Nderitu, D.; Samuel, G. The Ubuntu Way: Ensuring Ethical AI Integration in Health 
+
+Research. Wellcome Open Research 2024, 9, 625. 
+
+[4]    Liu,  Y.  Cross-Cultural  Challenges  to  Artificial  Intelligence  Ethics.  In  Computer  Sciences  & 
+
+Mathematics Forum; MDPI: Basel, Switzerland, 2023; Volume 8, No. 1, p. 21. 
+
+[5]    Williams Goodrich, L. Sumak Kawsay: Social Empowerment through Participatory User‐centred 
+
+Design in Ecuador. International Journal of Art & Design Education 2019, 38, 193-206. 
+
+[6]    Mamani, M. Yanantin: relación, complementariedad y cooperación en mundo andino. Estudios de 
+
+Teoría Literaria-Revista digital: artes, letras y humanidades 2019, 8, 191-203. 
+
+Maikel Y. Leyva Vázquez , Noel Batista Hernandez, Edwin Alberto Callejasand Florentin Smarandache, Multi-Neutrosophic Ayni 
+Method Based on Ancestral Logic and N-Alectic Reasoning for Ethical AI and Sustainability 
+
+ 
+ 
+ 
+ 
+ 
+Neutrosophic Sets and Systems, {Special Issue: Artificial Intelligence, Neutrosophy, and Latin American 
+Worldviews: Toward a Sustainable Future (Workshop – March 18–21, 2025, Universidad Tecnológica 
+de El Salvador, San Salvador, El Salvador)}, Vol. 84, 2025         
+
+18 
+
+[7]    Cusicanqui,  S.R.  Ch'ixinakax  utxiwa:  A  Reflection  on  the  Practices  and  Discourses  of 
+
+Decolonization. South Atlantic Quarterly 2012, 111, 95-109. 
+
+[8]    Owens, K.H. In Lak'ech, the Chicano clap, and fear: A partial rhetorical autopsy of Tucson's now-
+
+illegal ethnic studies classes. College English 2018, 80, 247-270. 
+
+[9]    Scott, C.; Tuana, N. Nepantla: Writing (from) the in-between. JSP: Journal of Speculative Philosophy 
+
+2017, 31, 1-15. 
+
+[10]    Smarandache,  F.;  Vázquez,  M.Y.L.  From  Di-alectics  to  N-alectics:  Indigenous  Cultures  and 
+
+Ancestral Philosophies in Latin America. Neutrosophic Sets and Systems 2025, 81, 1-11. 
+
+[11]    Smarandache, F. Introduction to the MultiNeutrosophic Set. Neutrosophic Sets and Systems 2023, 
+
+61, 89-99. 
+
+[12]    Paerregaard, K. Ayni unbounded: Cooperation, inequality, and migration in the Peruvian Andes. 
+
+The Journal of Latin American and Caribbean Anthropology 2017, 22, 459-474. 
+
+[13]    Pereira da Silva, F. The Community and the Paths of Critical Thinking in the Global Periphery: 
+The Cases of sumak kawsay/suma qamaña and Ubuntu. In New Paths of Development: Perspectives 
+from the Global South; Publisher: Publisher Location, Country, 2021; pp. 169-178. 
+
+[14]    Cortinhas,  J.;  Martinelli,  Y.;  Barbosa  Jr,  R.  'We'  instead  of  'me':  How  Buen  Vivir  Indigenous 
+cosmopraxes  allow  us  to  conceive  security  differently  and  face  insecurities  together.  European 
+Journal of International Security 2024, 9, 417-433. 
+
+[15]    Peredo, A.M. El buen vivir: Notions of wellbeing among Indigenous peoples of South America. 
+
+In Routledge handbook of indigenous wellbeing; Routledge: London, UK, 2019; pp. 156-169. 
+
+[16]    Weber,  S.M.;  Tascón,  M.A.  Pachamama—la  Universidad  del  'Buen  Vivir':  A  first  nations 
+sustainability university in Latin America. In Universities as living labs for sustainable development: 
+Supporting  the  implementation  of  the  sustainable  development  goals;  Publisher:  Publisher  Location, 
+Country, 2020; pp. 849-862. 
+
+[17]    Quintana,  J.X.I.;  Pincay,  G.F.F.;  Sagba,  E.Y.S.;  Cuji,  J.E.A.  Sistema  de  recomendaciones  para  la 
+evaluación  del  buen  vivir  de  los  niños  migrantes  que  pertenecen  a  familias  extranjeras  en  la 
+ciudad de Riobamba. Neutrosophic Computing and Machine Learning 2024, 33, 98-106. 
+
+[18]    Stahl,  B.C.  Artificial  intelligence  for  a  better  future:  an  ecosystem  perspective  on  the  ethics  of  AI  and 
+
+emerging digital technologies; Springer Nature: Cham, Switzerland, 2021; p. 124. 
+
+[19]    del Pozo, J.Y. Yanantin: The Dialogic Andean Philosophy of the Huarochiri Manuscript. Ph.D. 
+
+Thesis, The Catholic University of America, Washington, DC, USA, 2000. 
+
+[20]    Schmitt, J.F. Natural inclusionality, Indigenous wisdom, and the reality of nature. Human Arenas 
+
+2018, 1, 37-55. 
+
+[21]    Smarandache,  F.  A  unifying  field  in  Logics:  Neutrosophic  Logic.  In  Philosophy;  American 
+
+Research Press: Rehoboth, USA, 1999; pp. 1-141. 
+
+[22]    Williams,  D.H.;  Shipley,  G.P.  Enhancing  artificial  intelligence  with  indigenous  wisdom.  Open 
+
+Journal of Philosophy 2020, 11, 43-58. 
+
+[23]    Guerra, D.M.R.; Peña, O.P.; Yanez, J.A.T. Neutrosophic Evaluation of Ethical Factors in Remote 
+
+Medical Care. HyperSoft Set Methods in Engineering 2024, 1, 11-20. 
+
+[24]    Cusicanqui,  S.R.  Ch'ixinakax  utxiwa:  A  Reflection  on  the  Practices  and  Discourses  of 
+
+Decolonization. South Atlantic Quarterly 2012, 111, 95-109. 
+
+[25]    Vázquez,  M.Y.L.;  Smarandache,  F.  Andean  Epistemology,  Ch'ixi,  and  Neutrosophic  Logic. 
+
+Neutrosophic Sets and Systems 2025, 81, 246-257. 
+
+[26]    Bicas,  M.  Aymara  Andean  Democracy:  Taypi  and  Deliberative  Diversity  Towards  an 
+
+Intercultural Democracy. In Demodiversity; Routledge: London, UK, 2020; pp. 209-232. 
+
+[27]    Smarandache,  F.  Neutrosofía  y  Plitogenia:  fundamentos  y  aplicaciones.  Serie  Científica  de  la 
+
+Universidad de las Ciencias Informáticas 2024, 17, 164-168. 
+
+Maikel Y. Leyva Vázquez , Noel Batista Hernandez, Edwin Alberto Callejasand Florentin Smarandache, Multi-Neutrosophic Ayni 
+Method Based on Ancestral Logic and N-Alectic Reasoning for Ethical AI and Sustainability 
+
+ 
+ 
+ 
+ 
+ 
+Neutrosophic Sets and Systems, {Special Issue: Artificial Intelligence, Neutrosophy, and Latin American 
+Worldviews: Toward a Sustainable Future (Workshop – March 18–21, 2025, Universidad Tecnológica 
+de El Salvador, San Salvador, El Salvador)}, Vol. 84, 2025         
+
+19 
+
+[28]    Priest, G. Paraconsistent logic. In Handbook of philosophical logic; Springer Netherlands: Dordrecht, 
+
+Netherlands, 2002; pp. 287-393. 
+
+[29]    Amabie, T.; Izah, S.C.; Ogwu, M.C.; Hait, M. Harmonizing tradition and technology: The synergy 
+of artificial intelligence in traditional medicine. In Herbal Medicine Phytochemistry: Applications and 
+Trends; Springer International Publishing: Cham, Switzerland, 2024; pp. 2103-2125. 
+
+[30]    Weckert,  J.;  Bayod,  R.  The  Ethics  of  Technology:  How  Can  Indigenous  Thought  Contribute?. 
+
+NanoEthics 2023, 17, 6. 
+
+[31]    Monroy, A. In lak'ech. Excélsior. Available online: https://www.excelsior.com.mx/blog/camino-
+
+ligero/lakech/1258541 (accessed on March 18, 2025). 
+
+[32]    Gillespie, S.D. The extended person in Maya ontology. Estudios Latinoamericanos 2021, 41, 105-127. 
+[33]    Batz, J.M. "Nik" — The Zero in Vigesimal Maya Mathematics. Bulletin of the AAS 2021. Available 
+
+online: https://baas.aas.org/pub/2021n1i336p03/release/2 
+
+[34]    Ifrah,  G. The  Universal  History  of  Numbers:  From  Prehistory  to the  Invention  of the  Computer; John 
+
+Wiley & Sons: New York, USA, 2000. 
+
+[35]    Anzaldúa, G. Border Arte. Nepantla, el lugar de la frontera. In Entre Guadalupe y Malinche: Tejanas 
+
+in Literature and Art; University of Texas Press: Austin, USA, 2016; pp. 23-32. 
+
+[36]    Smarandache,  F.  Toward  a  new  paradigm:  Insights  into  neutrosophic  philosophy;  NSIA  Publishing: 
+
+Gallup, NM, USA, 2025. 
+
+[37]    Morales, C.J. Navigating Nepantla. In Chief Diversity Officers in Higher Education Today; Routledge: 
+
+London, UK, 2024; pp. 144-159. 
+
+[38]    Vázquez, M.Y.L.; Smarandache, F. Bridging Ancient Wisdom and Modern Logic: Neutrosophic 
+Perspectives on Body, Mind, Soul and Spirit. Neutrosophic Sets and Systems 2025, 82, 108-121. 
+[39]    Smarandache,  F.  Neutrosophic  set  is  a  generalization  of  intuitionistic  fuzzy  set,  inconsistent 
+intuitionistic  fuzzy  set  (picture  fuzzy  set,  ternary  fuzzy  set),  pythagorean  fuzzy  set,  spherical 
+fuzzy set, and q-rung orthopair fuzzy set, while neutrosophication is a generalization of regret 
+theory, grey system theory, and three-ways decision (revisited). Journal of New Theory 2019, 29, 1-
+31. 
+
+[40]    Smarandache,  F.;  Zhang,  Y.;  Sunderraman,  R.  Single  valued  neutrosophic  sets.  In  Neutrosophy: 
+neutrosophic probability, set and logic; American Research Press: Rehoboth, USA, 2009; Volume 4, 
+pp. 126-129. 
+
+[41]    Kandasamy,  I.;  Vasantha,  W.B.;  Obbineni,  J.M.;  Smarandache,  F.  Sentiment  analysis  of  tweets 
+
+using refined neutrosophic sets. Computers in Industry 2020, 115, 103180. 
+
+[42]    Smarandache, F. Introduction to the multineutrosophic set. Neutrosophic Sets and Systems 2023, 61, 
+
+89. 
+
+[43]    Arias,  E.A.O.;  Vargas,  J.L.C.;  Sánchez,  J.A.F.;  Estrada,  S.M.D.  Multineutrosophic  Analysis  of 
+Financial  Statements  as  a  Basis  for  Strategic  Decision-Making  in  Uncertain  Environments. 
+Neutrosophic Sets and Systems 2025, 82, 370-380. 
+
+[44]    Teruel, K.P.; Cedeno, J.C.; Gavilanez, H.L.; Diaz, C.B. A framework for selecting cloud computing 
+services  based  on  consensus  under  single  valued  neutrosophic  numbers.  Neutrosophic  Sets  and 
+Systems 2018, 22, 4. 
+
+Received: December 20, 2024. Accepted: March 10, 2025. 
+
+Maikel Y. Leyva Vázquez , Noel Batista Hernandez, Edwin Alberto Callejasand Florentin Smarandache, Multi-Neutrosophic Ayni 
+Method Based on Ancestral Logic and N-Alectic Reasoning for Ethical AI and Sustainability 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
