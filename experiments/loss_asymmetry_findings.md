@@ -105,3 +105,41 @@ size artefact either. Standing: the direction is not explained by how many
 losses each phenomenon produced. Still unexplained, still not stimulus-swapped.
 (Sign convention here: asym(A→B) = c(A→B) − c(B→A); the battery script prints
 the coverage difference, which has the opposite sign for the control pair.)
+
+## Addendum 2026-09-14 (later): the stimulus swap, pre-registered and run
+
+Pre-registration: `stimulus_swap_prereg.md` (committed and stamped before the
+first call; priors: Claude 0.55, Tony 0.85). Data: `data/s4_stimulus_swap.csv`,
+125 calls, 125 parsed, 0 errors. Analysis: `analyze_stimulus_swap.py`.
+
+| cell | MiniLM | mpnet |
+|---|---|---|
+| original ign→par | +0.151 [+0.043, +0.189] | +0.134 [+0.050, +0.174] |
+| T1 swap ign→swap par | +0.207 [+0.055, +0.230] | +0.237 [+0.082, +0.281] |
+| T2 orig ign→swap par | +0.171 [+0.032, +0.210] | +0.107 [+0.040, +0.155] |
+| T2 swap ign→orig par | +0.210 [+0.061, +0.230] | +0.250 [+0.077, +0.292] |
+| control orig con→vag | +0.048 [+0.029, +0.083] | +0.085 [+0.060, +0.094] |
+| control swap con→vag | +0.019 [−0.012, +0.041] | +0.017 [−0.033, +0.049] |
+
+**Verdict under the fixed rule: the sign holds.** All four target cells are
+positive with 95% intervals excluding zero on both encoders, and the swap
+magnitudes are larger than the original, not smaller. The asymmetry is a
+property of the phenomena's loss vocabularies, not of the two sentences.
+
+**The control resolved the other way.** On the swap sentences the
+contingency→vagueness asymmetry collapses to zero on both encoders. Its
+original sign-stability was stimulus-bound. So the June battery's control did
+what a control should, one run late: the target survives a stimulus change and
+the control does not.
+
+Post hoc (not pre-registered, labelled as such): size-matched target on the swap
+data, n = 52 per set, 1000 draws: +0.186 [+0.093, +0.211] (MiniLM),
++0.222 [+0.152, +0.242] (mpnet).
+
+Also noted while checking: the original S4 file has 23 excluded rows (18
+Mistral, 5 Llama, API errors), so Mistral is thin in the original asymmetry
+cells. `data/s4_mistral_rerun.csv` exists and was not used by these scripts.
+The swap run had no exclusions.
+
+Standing now: the direction is real, survives a change of sentences and a size
+match, and has no theory. Tony's prior (0.85) was the better one.
