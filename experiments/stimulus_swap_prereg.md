@@ -58,4 +58,6 @@ positive under this convention (contingency's losses covered worse by vagueness'
 Claude (this instance): P(sign holds) = 0.55. Reasoning: the size-matched check
 removed the mechanical explanation, but one sentence per phenomenon is one
 sentence, and I could not guess the direction from theory before the data.
-Tony: ___ (to be entered before results are shown to him).
+Tony (entered 2026-09-14, before any analysis was run or shown): P(sign holds) = 0.85.
+Reasoning: "the swap is consistent with the original; I would not expect a sign change."
+He frames it per phenomenon: 85% that each individual phenomenon's asymmetry is retained.
