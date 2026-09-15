@@ -76,7 +76,12 @@ symmetry is an axiom their data already strain, and a non-commutative
 c(v_i → v_j) is a well-posed open problem *in their formalism*. Hand it to them
 as an open problem, not as a result. That is the chair pulled out.
 
-**Do not send** the asymmetry finding as a positive result. The control failed.
+**Status of the asymmetry finding, updated 2026-09-14.** The June control had failed, so the
+finding was not to be sent as a result. The pre-registered stimulus swap run on 2026-09-14
+changed that: the target direction held in all four cells on both encoders, survived a size
+match, and the control collapsed to zero on the new sentences (see
+`experiments/loss_asymmetry_findings.md`). It can be sent as what it is: a direction that
+survived its falsification tests and still has no theory.
 
 **The two-path consensus demonstration** (their AIHealthProject case: Cx rises
 0.57 → 0.94 under mutual adjustment *and* under capitulation, same number) is
