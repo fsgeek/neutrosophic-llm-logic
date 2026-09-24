@@ -143,3 +143,48 @@ The swap run had no exclusions.
 
 Standing now: the direction is real, survives a change of sentences and a size
 match, and has no theory. Tony's prior (0.85) was the better one.
+
+## Addendum 2026-09-24: the two-way register test, pre-registered and run
+
+Pre-registration: `register2_prereg.md` (priors on P(vanishes): Claude 0.45,
+Tony 0.10). Labels: `data/register2_labels.csv`, 633 loss items, judge
+gpt-4o-mini at temperature 0 seeing only `what` and `why`; 0 unparsed.
+Analysis: `register2_analyze.py`. Judge/anchor-rule agreement 0.85 to 0.88.
+
+**P1, the premise, holds and is near-categorical.** Share of world-directed
+losses: ignorance 0.71 (original), 0.76 (swap); paradox 0.04 in both. The
+register split is real and much sharper than expected.
+
+**F-W is inconclusive by rule:** paradox has 4 world-directed losses in 236
+items, below the pre-registered minimum of 10. The world register cannot be
+tested within itself because paradox almost never produces it.
+
+**F-S, within the sentence register, pooled data (the gating cell):**
+
+| classifier | MiniLM | mpnet |
+|---|---|---|
+| judge | +0.079 [+0.013, +0.127] | +0.086 [+0.038, +0.126] |
+| anchor rule | +0.079 [+0.024, +0.119] | +0.113 [+0.069, +0.150] |
+
+Full (unsplit) asymmetry on the pooled data: +0.204 (MiniLM), +0.214 (mpnet).
+
+**Verdict under the fixed rule: survives.** An evaluable within-register cell is
+positive with CIs excluding zero on both encoders. Register does not explain
+the asymmetry away. Tony's prior was right for the second time.
+
+**Honest reading, past the binary.** Register explains a large part of it:
+within the sentence register the asymmetry is about 40% of the full value, and
+the cross-register cell X (ign_W→par_S) is large (+0.16 to +0.19, judge,
+pooled). So the composition story is true as far as it goes: most of the
+direction comes from ignorance losses being about the world and paradox losses
+being about the sentence. But a residual remains among sentence-directed losses
+alone: even when both phenomena's losses are about the statement, ignorance's
+are covered worse by paradox's than the reverse. On the separate datasets that
+residual is smaller and its CI touches zero in three of eight cells, so it is
+real in the pool and thin in the parts.
+
+Standing: the direction is now three-layered. (1) A near-categorical register
+split, which is itself a clean finding about declared losses. (2) A composition
+effect from that split, which accounts for most of the asymmetry. (3) A residual
+within-register asymmetry with no theory. Layer 3 is the open problem; layers 1
+and 2 are what to hand over.
