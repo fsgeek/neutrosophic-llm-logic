@@ -1,6 +1,6 @@
 # Draft reply to Maikel Leyva-Vázquez (JEPR editorial board invitation)
 
-Status: draft for Tony to edit and send. Written 2026-09-13 by a Claude instance in Tony's voice; not sent.
+Status: SUPERSEDED, never sent. Tony wrote his own note (`2026-09-24-note-to-maikel.md`) covering the findings through the register test; the board-invitation answer is handled separately. Kept for the record. Written 2026-09-13 by a Claude instance in Tony's voice.
 
 ---
 
