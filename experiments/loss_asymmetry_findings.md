@@ -188,3 +188,22 @@ split, which is itself a clean finding about declared losses. (2) A composition
 effect from that split, which accounts for most of the asymmetry. (3) A residual
 within-register asymmetry with no theory. Layer 3 is the open problem; layers 1
 and 2 are what to hand over.
+
+### Post hoc (2026-09-24): Jev as a third classifier
+
+Not pre-registered; added after the judge result to test whether the register
+split is an artefact of the judge model. `register2_jev.py` casts the same
+question as a TypeSafe System One Choice (model pinned to jev-1.13.0, one call
+per loss, seeing only `what` and `why`); `register2_jev_analyze.py` reports.
+Labels with probabilities and request ids: `data/register2_jev_labels.csv`.
+
+- Judge/Jev agreement 0.897 overall (ignorance 0.86, paradox 0.99). Jev calls
+  ignorance losses 62% world-directed (judge 74%), paradox 3% (judge 4%).
+- Jev's median confidence is 0.99; on the items where it disagrees with the
+  judge it is 0.64. The disagreements sit where the instrument itself is unsure.
+- Within the sentence register under Jev's labels, pooled: +0.091 [+0.046,
+  +0.127] (MiniLM), +0.101 [+0.062, +0.133] (mpnet). Same verdict as the judge:
+  the residual survives.
+
+Three classifiers (LLM judge, embedding anchors, Jev) now agree on the split
+and on the within-register residual.
