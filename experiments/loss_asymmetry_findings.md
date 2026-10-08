@@ -164,8 +164,11 @@ Analysis: `register2_analyze.py`. Judge/anchor-rule agreement 0.85 to 0.88.
 losses: ignorance 0.71 (original), 0.76 (swap); paradox 0.04 in both. The
 register split is real and much sharper than expected.
 
-**F-W is inconclusive by rule:** paradox has 4 world-directed losses in 236
-items, below the pre-registered minimum of 10. The world register cannot be
+**F-W is inconclusive by rule:** paradox has 4 world-directed losses of its
+100 (pooled; the target pair has 236 items in all), below the pre-registered
+minimum of 10. *(Corrected 2026-10-08: this line originally read "4
+world-directed losses in 236 items," which reads as paradox's total; the
+counts in `data/register2_labels.csv` are 48 + 52 = 100 paradox losses.)* The world register cannot be
 tested within itself because paradox almost never produces it.
 
 **F-S, within the sentence register, pooled data (the gating cell):**
