@@ -1,6 +1,15 @@
 # Directional asymmetry in S4 declared losses: one robust number, two falsified theories, one failed control (v0.1)
 
-**Status: exploratory measured note (experiments 2026-06-04/05; re-run verbatim 2026-09-13).**
+**Current status (2026-10-08):** the direction survived a size match (post hoc),
+a stimulus swap and a register split (both pre-registered); see the addenda
+below, which supersede the body where they differ. Standing: a near-categorical
+register split, a composition effect explaining most of the direction, and a
+within-register residual with no theory. Known open controls: dispersion
+matching (addendum 2026-10-08), prompt variation, an encoder from outside the
+sentence-transformers family.
+
+**Original status (2026-09-13), kept as written:** exploratory measured note
+(experiments 2026-06-04/05; re-run verbatim 2026-09-13).
 Not a result to send. Not stimulus-swap tested. No validated generative model.
 Producers: `loss_asymmetry.py`, `loss_asymmetry_battery.py`, `ranking_test.py`,
 `register_test.py`, all over `data/s4_tensor_results.csv`, encoders
@@ -207,3 +216,29 @@ Labels with probabilities and request ids: `data/register2_jev_labels.csv`.
 
 Three classifiers (LLM judge, embedding anchors, Jev) now agree on the split
 and on the within-register residual.
+
+## Addendum 2026-10-08: dispersion, computed in September and not reported
+
+`asymmetry_breadth_check.py` (the 2026-09-14 breadth check) prints three
+breadth correlations across the 10 pairs; the addendum above reported only
+set size. Re-run today, unchanged script, same data:
+
+| breadth measure (A minus B) | MiniLM ρ (p) | mpnet ρ (p) |
+|---|---|---|
+| n (set size) | +0.67 (0.03) | +0.52 (0.13) |
+| n distinct `what` strings | +0.42 (0.23) | +0.25 (0.50) |
+| dispersion (1 − mean pairwise cos) | −0.42 (0.23) | **−0.69 (0.03)** |
+
+Dispersion tracks asymmetry across pairs on mpnet: the less dispersed set of
+a pair tends to be the one covered worse. For the target pair the dispersion
+gap is small (ignorance minus paradox: −0.018 MiniLM, −0.023 mpnet), so it is
+unlikely to carry the target, but no dispersion-matched test has been run and
+this omission is of the same kind as the June memory's missing control,
+smaller. Ten pairs, two encoders from one family, no correction for the three
+correlations tested; read as a lead, not a result.
+
+A related caution about the estimator itself: max-cos coverage between two
+differently shaped point clouds is generically nonzero in one direction, so
+"c is asymmetric" is close to guaranteed for any two loss sets that differ.
+What carries information is which pairs, which direction, and whether it
+survives controls; that is the standard the tests above were held to.
