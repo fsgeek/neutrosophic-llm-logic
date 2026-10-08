@@ -4,8 +4,10 @@
 a stimulus swap and a register split (both pre-registered); see the addenda
 below, which supersede the body where they differ. Standing: a near-categorical
 register split, a composition effect explaining most of the direction, and a
-within-register residual with no theory. Known open controls: dispersion
-matching (addendum 2026-10-08), prompt variation, an encoder from outside the
+within-register residual with no theory. Dispersion matching (pre-registered,
+2026-10-08): the target survives wherever matching is possible; the pooled data
+cannot be matched by the registered design. Still open: dispersion for the
+pooled and within-register cells, prompt variation, an encoder from outside the
 sentence-transformers family.
 
 **Original status (2026-09-13), kept as written:** exploratory measured note
@@ -245,3 +247,70 @@ differently shaped point clouds is generically nonzero in one direction, so
 "c is asymmetric" is close to guaranteed for any two loss sets that differ.
 What carries information is which pairs, which direction, and whether it
 survives controls; that is the standard the tests above were held to.
+
+## Addendum 2026-10-08 (later): the dispersion-matched test, pre-registered and run
+
+Pre-registration: `dispersion_prereg.md`, committed and stamped with its
+script before it ran (8146a96). Priors: Claude P(target survives) = 0.75 and
+P(mpnet cross-pair |rho| < 0.4 after matching) = 0.55; Tony declined a number
+("I'll wait and see what we actually learn"). Script `dispersion_matched.py`;
+full output `dispersion_matched_output.txt`. No new data.
+
+**Target, primary estimator** (size-k subsets accepted when dispersions differ
+by ≤ 0.005; mean [2.5%, 97.5%] over 1000 accepted draws):
+
+| data | MiniLM | mpnet | size-matched only (for comparison) |
+|---|---|---|---|
+| original | +0.120 [+0.053, +0.149] | +0.109 [+0.053, +0.132] | +0.113 / +0.104 |
+| swap | +0.195 [+0.116, +0.210] | +0.229 [+0.222, +0.236] | +0.186 / +0.222 |
+| pooled | **unmatchable** (0 of 200,000) | **unmatchable** (0 of 200,000) | |
+
+**Verdict by the letter of the rule: the gate is not met, because half of it
+cannot be evaluated.** The rule required survival on both the original and the
+pooled data; the pooled data are unmatchable on both encoders, which the rule
+says makes that dataset not evaluable, and the rule did not say how the gate
+resolves then. I am not resolving that ambiguity in my favour: the 0.75 prior
+is scored as unresolved, not won. "Explained by dispersion" is not met either.
+
+**What the evaluable data say.** On the original and the swap data, matching
+dispersion changes almost nothing: the matched values are within 0.01 of the
+size-matched ones and slightly larger, all intervals exclude zero. Within these
+pairs the slope of asymmetry on dispersion gap is positive (+0.25 to +0.44),
+the opposite sign to the cross-pair correlation, and ignorance is the *less*
+dispersed set, so in these data dispersion, if anything, slightly suppresses
+the target. It does not produce it.
+
+**Why the pooled data could not be matched, and what that changes.** Pooling
+reverses the dispersion gap: ignorance minus paradox is −0.02 within each
+dataset but +0.12 (MiniLM) / +0.10 (mpnet) pooled. Ignorance's two sentences
+(stars, Caesar's hair) produce losses in different places, while paradox's two
+liar-type sentences produce losses in the same place, so pooling spreads
+ignorance and not paradox. Random subsets cannot bridge a gap that size. The
+secondary estimator (regression intercept at zero gap, reported not gated)
+gives +0.126 [+0.110, +0.141] (MiniLM) and +0.110 [+0.096, +0.125] (mpnet),
+but it extrapolates from gaps clustered near +0.11 to zero, and its intervals
+resample draws of the same items, so they are far too narrow. Read it as
+"positive", nothing more precise.
+
+**Consequence for earlier numbers:** the register test (addendum 2026-09-24)
+and the note to Maikel use pooled data. The pooled unsplit asymmetry (+0.20)
+carries a dispersion difference created by pooling two stimuli, which the
+per-dataset values do not; per-dataset values (+0.13 to +0.24) are the cleaner
+comparison. The within-register residual has not been dispersion-checked.
+
+**Secondary, cross-pair (descriptive):** only 5 of 10 pairs could be matched
+on each encoder (pairs with gaps above about 0.03 fail). Over those 5,
+Spearman(matched asym, full gap) = −0.30 (MiniLM, p = 0.62), −0.90 (mpnet,
+p = 0.04). By the letter the 0.55 prior lost (|rho| did not fall below 0.4);
+with five pairs, half the set unmatchable, and a different subset per encoder,
+it says little either way.
+
+**Design lesson:** rejection matching on random subsets only works when the
+sets are already close; the pooled gap was not known when the rule was
+written, and should have been computed first. A matching design that can bridge
+large gaps (e.g., choosing subsets to target a dispersion) would be the next
+step if the pooled question matters.
+
+Standing after this: the target survives dispersion matching wherever matching
+is possible; the pooled data need a different design; the cross-pair dispersion
+pattern is unresolved.

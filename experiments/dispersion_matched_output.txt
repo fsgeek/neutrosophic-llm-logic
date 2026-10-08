@@ -1,0 +1,49 @@
+original: Contingency 61, Contradiction 62, Ignorance 70, Paradox 48, Vagueness 53
+swap: Contingency 74, Contradiction 80, Ignorance 66, Paradox 52, Vagueness 67
+pooled: Contingency 135, Contradiction 142, Ignorance 136, Paradox 100, Vagueness 120
+
+=== all-MiniLM-L6-v2   asym(A->B) = c(A->B) - c(B->A); + means A covered WORSE by B
+
+-- TARGET ignorance->paradox
+original  k= 48 full +0.151 (full disp gap -0.018) | matched +0.120 [+0.053, +0.149]  accept 1000/7180  mean gap -0.0000
+          secondary: intercept +0.118 [+0.117, +0.120], slope +0.25, mean free gap -0.0181
+swap      k= 52 full +0.207 (full disp gap -0.019) | matched +0.195 [+0.116, +0.210]  accept 1000/6648  mean gap -0.0005
+          secondary: intercept +0.195 [+0.194, +0.197], slope +0.42, mean free gap -0.0187
+pooled    k=100 full +0.223 (full disp gap +0.116) | UNMATCHABLE (0 accepted in 200000 tries)
+          secondary: intercept +0.126 [+0.110, +0.141], slope +0.60, mean free gap +0.1161
+
+-- SECONDARY, original data, all 10 pairs (descriptive)
+Contingency (F -> Contradiction  matched +nan  accept 0/200000  full disp gap +0.014
+Contingency (F -> Ignorance (Epi matched +nan  accept 0/200000  full disp gap +0.051
+Contingency (F -> Paradox (Logic matched +0.072  accept 1000/36909  full disp gap +0.033
+Contingency (F -> Vagueness (Fuz matched +nan  accept 0/200000  full disp gap +0.056
+Contradiction  -> Ignorance (Epi matched +nan  accept 82/200000  full disp gap +0.037
+Contradiction  -> Paradox (Logic matched +0.029  accept 1000/13765  full disp gap +0.019
+Contradiction  -> Vagueness (Fuz matched +nan  accept 0/200000  full disp gap +0.042
+Ignorance (Epi -> Paradox (Logic matched +0.120  accept 1000/7180  full disp gap -0.018
+Ignorance (Epi -> Vagueness (Fuz matched +0.013  accept 1000/5307  full disp gap +0.005
+Paradox (Logic -> Vagueness (Fuz matched -0.088  accept 1000/13396  full disp gap +0.023
+Spearman(matched asym, full disp gap) over 5 pairs: rho=-0.300 p=0.624
+
+=== all-mpnet-base-v2   asym(A->B) = c(A->B) - c(B->A); + means A covered WORSE by B
+
+-- TARGET ignorance->paradox
+original  k= 48 full +0.134 (full disp gap -0.023) | matched +0.109 [+0.053, +0.132]  accept 1000/8609  mean gap -0.0006
+          secondary: intercept +0.108 [+0.106, +0.109], slope +0.27, mean free gap -0.0237
+swap      k= 52 full +0.237 (full disp gap -0.050) | matched +0.229 [+0.222, +0.236]  accept 1000/151112  mean gap -0.0014
+          secondary: intercept +0.242 [+0.239, +0.246], slope +0.44, mean free gap -0.0505
+pooled    k=100 full +0.207 (full disp gap +0.101) | UNMATCHABLE (0 accepted in 200000 tries)
+          secondary: intercept +0.110 [+0.096, +0.125], slope +0.70, mean free gap +0.1012
+
+-- SECONDARY, original data, all 10 pairs (descriptive)
+Contingency (F -> Contradiction  matched +nan  accept 0/200000  full disp gap +0.014
+Contingency (F -> Ignorance (Epi matched +nan  accept 223/200000  full disp gap +0.035
+Contingency (F -> Paradox (Logic matched +0.092  accept 1000/5482  full disp gap +0.012
+Contingency (F -> Vagueness (Fuz matched +nan  accept 0/200000  full disp gap +0.050
+Contradiction  -> Ignorance (Epi matched -0.073  accept 1000/19259  full disp gap +0.021
+Contradiction  -> Paradox (Logic matched +0.069  accept 1000/2859  full disp gap -0.002
+Contradiction  -> Vagueness (Fuz matched +nan  accept 36/200000  full disp gap +0.036
+Ignorance (Epi -> Paradox (Logic matched +0.109  accept 1000/8609  full disp gap -0.023
+Ignorance (Epi -> Vagueness (Fuz matched -0.008  accept 1000/6929  full disp gap +0.015
+Paradox (Logic -> Vagueness (Fuz matched +nan  accept 0/200000  full disp gap +0.038
+Spearman(matched asym, full disp gap) over 5 pairs: rho=-0.900 p=0.037
