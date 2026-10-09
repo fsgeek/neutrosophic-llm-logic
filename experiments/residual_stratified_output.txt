@@ -1,0 +1,22 @@
+
+=== all-MiniLM-L6-v2   asym(ign_S -> par_S); + means ignorance covered WORSE
+  [judge] F-S n: orig (20,46), swap (16,50)
+  [judge] PRIMARY stratified+matched: +0.071 [+0.015, +0.115]  failures {'orig': 13, 'swap': 14}  evaluable=True
+  [judge] stratified F-S, no matching: +0.052 [-0.003, +0.097]
+  [judge] stratified FULL (unsplit): +0.146 [+0.105, +0.179]
+  [jev  ] F-S n: orig (33,46), swap (18,51)
+  [jev  ] PRIMARY stratified+matched: +0.072 [+0.036, +0.105]  failures {'orig': 231, 'swap': 24}  evaluable=False
+  [jev  ] stratified F-S, no matching: +0.064 [+0.025, +0.100]
+  [jev  ] stratified FULL (unsplit): +0.146 [+0.107, +0.177]
+
+=== all-mpnet-base-v2   asym(ign_S -> par_S); + means ignorance covered WORSE
+  [judge] F-S n: orig (20,46), swap (16,50)
+  [judge] PRIMARY stratified+matched: +0.082 [+0.042, +0.123]  failures {'orig': 15, 'swap': 3}  evaluable=True
+  [judge] stratified F-S, no matching: +0.064 [+0.026, +0.102]
+  [judge] stratified FULL (unsplit): +0.147 [+0.109, +0.180]
+  [jev  ] F-S n: orig (33,46), swap (18,51)
+  [jev  ] PRIMARY stratified+matched: +0.085 [+0.051, +0.122]  failures {'orig': 256, 'swap': 9}  evaluable=False
+  [jev  ] stratified F-S, no matching: +0.076 [+0.042, +0.110]
+  [jev  ] stratified FULL (unsplit): +0.147 [+0.109, +0.180]
+
+VERDICT (judge, primary, by rule): SURVIVES

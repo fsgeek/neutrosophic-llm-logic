@@ -4,11 +4,12 @@
 a stimulus swap and a register split (both pre-registered); see the addenda
 below, which supersede the body where they differ. Standing: a near-categorical
 register split, a composition effect explaining most of the direction, and a
-within-register residual with no theory. Dispersion matching (pre-registered,
-2026-10-08): the target survives wherever matching is possible; the pooled data
-cannot be matched by the registered design. Still open: dispersion for the
-pooled and within-register cells, prompt variation, an encoder from outside the
-sentence-transformers family.
+within-register residual with no theory, about half the full value when
+estimated without pooling (2026-10-08). Dispersion (pre-registered, 2026-10-08):
+the target survives matching wherever matching is possible, and the residual
+survives a stratified, dispersion-matched test; pooling had inflated the full
+value, not the residual. Still open: prompt variation, an encoder from outside
+the sentence-transformers family.
 
 **Original status (2026-09-13), kept as written:** exploratory measured note
 (experiments 2026-06-04/05; re-run verbatim 2026-09-13).
@@ -314,3 +315,48 @@ step if the pooled question matters.
 Standing after this: the target survives dispersion matching wherever matching
 is possible; the pooled data need a different design; the cross-pair dispersion
 pattern is unresolved.
+
+## Addendum 2026-10-08 (last): the within-register residual, stratified and dispersion-matched
+
+Pre-registration: `residual_stratified_prereg.md`, committed, stamped and pushed
+with its script before the run (55bfc0a). Prior: Claude P(survives) = 0.40.
+Output: `residual_stratified_output.txt`. (A first run was killed at a
+ten-minute tool limit with its output still buffered; nothing was printed or
+seen. The committed script was rerun unchanged.)
+
+Design: no pooling. The sentence-register (F-S) asymmetry is estimated within
+the original and within the swap data separately, dispersion-matched inside
+each stratum, cell bootstrap, then the two strata are averaged.
+
+| F-S, judge labels | MiniLM | mpnet |
+|---|---|---|
+| **primary: stratified + matched** | **+0.071 [+0.015, +0.115]** | **+0.082 [+0.042, +0.123]** |
+| match failures (orig, swap, of 1000) | 13, 14 | 15, 3 |
+| stratified, no matching | +0.052 [−0.003, +0.097] | +0.064 [+0.026, +0.102] |
+| stratified full (unsplit) | +0.146 [+0.105, +0.179] | +0.147 [+0.109, +0.180] |
+| Jev labels, stratified, no matching | +0.064 [+0.025, +0.100] | +0.076 [+0.042, +0.110] |
+
+Jev, matched: +0.072 / +0.085, but not evaluable by rule (original-stratum
+match failures 231 and 256 of 1000; Jev puts 33 ignorance items in the
+sentence register there, which are harder to match). Reported only.
+
+**Verdict by rule: SURVIVES** on both encoders. The 0.40 prior lost.
+
+**What changes.**
+- The residual is not a pooling artefact. Matching dispersion *raises* it
+  (+0.052 → +0.071, +0.064 → +0.082), as it raised the unsplit target earlier
+  today: in these data dispersion works against the direction, not for it.
+- Pooling inflated the *full* asymmetry, not the residual: stratified full is
+  +0.15, against +0.20 pooled. So the residual is about half of the full value
+  (0.071/0.146 = 49%, 0.082/0.147 = 56%), not "about 40%" as the 2026-09-24
+  addendum and the note to Maikel put it. Composition by register still
+  explains about half; the unexplained half is larger than we said.
+- Limits: 16 to 20 ignorance items per stratum in the sentence register; one
+  unmatched cell's interval touches zero; the two encoders are from one family.
+
+**A pattern in the priors.** Claude's priors on this pair are now 0.55
+(swap), 0.45 to vanish (register), 0.75 (dispersion, unresolved), 0.40 (this):
+every gated bet that the direction would survive was too low or lost, and the
+bets were placed by instances pricing the deflationary mechanism they had just
+built. Whatever the residual is, it has been more robust than three instances
+expected.
